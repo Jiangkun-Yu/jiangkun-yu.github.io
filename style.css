@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #fafafa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.right-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+
+#lang-toggle {
+    padding: 8px 14px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.hero {
+    padding: 120px 0 100px;
+    background: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    max-width: 700px;
+    font-size: 1.15rem;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.btn.secondary {
+    background: #666;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.card,
+.publication {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.skill-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: white;
+    margin-top: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
