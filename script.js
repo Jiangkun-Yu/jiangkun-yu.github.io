@@ -49,4 +49,35 @@
         applyLang(current === 'en' ? 'zh' : 'en');
     });
 
+    /* =========================================================
+       Outline — highlight the section currently in view
+       ========================================================= */
+    const outlineLinks = Array.from(document.querySelectorAll('.outline__list a'));
+    const targets = outlineLinks
+        .map(a => document.querySelector(a.getAttribute('href')))
+        .filter(Boolean);
+
+    function updateActive() {
+        const line = window.innerHeight * 0.3;   // a section is "current" once its top passes 30% of the screen
+        let idx = 0;
+        targets.forEach((el, i) => {
+            if (el.getBoundingClientRect().top - line <= 0) idx = i;
+        });
+        // at the very bottom, mark the last section
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+            idx = targets.length - 1;
+        }
+        outlineLinks.forEach((a, i) => a.classList.toggle('is-active', i === idx));
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => { updateActive(); ticking = false; });
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateActive);
+    updateActive();
+
 })();

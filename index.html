@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -39,16 +39,22 @@
                 <li><span class="info__k" data-en="Email:" data-zh="邮箱:">Email:</span><a class="info__v" href="mailto:jiangkun.yu@aalto.fi">jiangkun.yu@aalto.fi</a></li>
             </ul>
 
-            <div class="langs">
-                <div class="ring" style="--p: 100">
+            <!-- Main fields: change --p (0–100) to adjust how full each ring is -->
+            <div class="rings">
+                <div class="ring" style="--p: 95">
                     <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
-                    <span class="ring__label" data-en="Native" data-zh="母语">Native</span>
-                    <span class="ring__name" data-en="Chinese" data-zh="中文">Chinese</span>
+                    <span class="ring__label">95%</span>
+                    <span class="ring__name" data-en="Soft Robotics" data-zh="软体机器人">Soft Robotics</span>
+                </div>
+                <div class="ring" style="--p: 90">
+                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
+                    <span class="ring__label">90%</span>
+                    <span class="ring__name" data-en="Control" data-zh="控制">Control</span>
                 </div>
                 <div class="ring" style="--p: 85">
                     <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
-                    <span class="ring__label" data-en="Working" data-zh="熟练">Working</span>
-                    <span class="ring__name" data-en="English" data-zh="英语">English</span>
+                    <span class="ring__label">85%</span>
+                    <span class="ring__name" data-en="Embedded" data-zh="嵌入式">Embedded</span>
                 </div>
             </div>
 
@@ -61,6 +67,12 @@
                 <li data-en="Python · MATLAB · C/C++" data-zh="Python · MATLAB · C/C++">Python · MATLAB · C/C++</li>
                 <li data-en="SolidWorks · PCB design · 3D printing" data-zh="SolidWorks · PCB 设计 · 3D 打印">SolidWorks · PCB design · 3D printing</li>
             </ul>
+
+            <h2 class="sidebar__heading" data-en="Languages" data-zh="语言">Languages</h2>
+            <ul class="info info--plain">
+                <li><span class="info__k" data-en="Chinese" data-zh="中文">Chinese</span><span class="info__v" data-en="Native" data-zh="母语">Native</span></li>
+                <li><span class="info__k" data-en="English" data-zh="英语">English</span><span class="info__v" data-en="Working proficiency" data-zh="熟练">Working proficiency</span></li>
+            </ul>
         </div>
 
         <div class="sidebar__social">
@@ -70,7 +82,23 @@
         </div>
     </aside>
 
-    <main class="page">
+    <!-- ============== OUTLINE (section navigator) ============== -->
+    <nav class="outline" aria-label="Page outline">
+        <p class="outline__heading" data-en="Outline" data-zh="目录">Outline</p>
+        <ol class="outline__list">
+            <li><a href="#top" data-en="Home" data-zh="首页">Home</a></li>
+            <li><a href="#summary" data-en="Summary" data-zh="简介">Summary</a></li>
+            <li><a href="#education" data-en="Education" data-zh="教育背景">Education</a></li>
+            <li><a href="#publications" data-en="Publications" data-zh="学术成果">Publications</a></li>
+            <li><a href="#conferences" data-en="Conferences" data-zh="学术会议">Conferences</a></li>
+            <li><a href="#projects" data-en="Research Projects" data-zh="项目经历">Research Projects</a></li>
+            <li><a href="#teaching" data-en="Teaching" data-zh="教学和组织">Teaching</a></li>
+            <li><a href="#honours" data-en="Honours & Awards" data-zh="荣誉与奖项">Honours & Awards</a></li>
+            <li><a href="#skills" data-en="Skills" data-zh="技能">Skills</a></li>
+        </ol>
+    </nav>
+
+    <main class="page" id="top">
 
         <!-- ============== HERO BANNER ============== -->
         <header class="hero">
@@ -516,6 +544,6 @@
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
