@@ -7,7 +7,7 @@
     <meta name="description" content="Personal website of Jiangkun Yu, doctoral researcher in robotics at Aalto University, specializing in miniature robotic systems, soft robotics and micromanipulation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,64 +17,89 @@
         <span data-en="中文" data-zh="EN">中文</span>
     </button>
 
-    <main class="page">
+    <div class="layout">
 
-        <!-- ============== HEADER ============== -->
-        <header class="hero">
-            <div class="hero__accent"></div>
+    <!-- ============== SIDEBAR ============== -->
+    <aside class="sidebar">
+        <div class="sidebar__profile">
+            <div class="avatar">
+                <img src="assets/profile.jpg" alt="Jiangkun Yu">
+                <span class="avatar__dot" aria-hidden="true"></span>
+            </div>
+            <h1 class="sidebar__name" data-en="Jiangkun Yu" data-zh="于江坤">Jiangkun Yu</h1>
+            <p class="sidebar__role" data-en="Doctoral Researcher" data-zh="博士研究生">Doctoral Researcher</p>
+            <p class="sidebar__role" data-en="Robotics & Autonomous Systems" data-zh="机器人与自主系统">Robotics & Autonomous Systems</p>
+        </div>
 
-            <div class="hero__top">
-                <div class="hero__photo">
-                    <img src="assets/profile.jpg" alt="Jiangkun Yu">
+        <div class="sidebar__scroll">
+            <ul class="info">
+                <li><span class="info__k" data-en="Affiliation:" data-zh="单位:">Affiliation:</span><span class="info__v" data-en="Aalto University" data-zh="阿尔托大学">Aalto University</span></li>
+                <li><span class="info__k" data-en="City:" data-zh="城市:">City:</span><span class="info__v" data-en="Espoo, Finland" data-zh="埃斯波,芬兰">Espoo, Finland</span></li>
+                <li><span class="info__k" data-en="Phone:" data-zh="电话:">Phone:</span><span class="info__v" data-en="+358 46 890 6497" data-zh="+86 178 5422 7548">+358 46 890 6497</span></li>
+                <li><span class="info__k" data-en="Email:" data-zh="邮箱:">Email:</span><a class="info__v" href="mailto:jiangkun.yu@aalto.fi">jiangkun.yu@aalto.fi</a></li>
+            </ul>
+
+            <div class="langs">
+                <div class="ring" style="--p: 100">
+                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
+                    <span class="ring__label" data-en="Native" data-zh="母语">Native</span>
+                    <span class="ring__name" data-en="Chinese" data-zh="中文">Chinese</span>
                 </div>
-                <div class="hero__intro">
-                    <h1 class="hero__name">
-                        <span data-en="Jiangkun Yu" data-zh="于江坤">Jiangkun Yu</span>
-                    </h1>
-                    <p class="hero__title">
-                        <span data-en="Doctoral Researcher · Robotics & Autonomous Systems"
-                              data-zh="博士研究生 · 机器人与自主系统">Doctoral Researcher · Robotics & Autonomous Systems</span>
-                    </p>
-                    <p class="hero__affiliation">
-                        <span data-en="Aalto University, Finland"
-                              data-zh="阿尔托大学,芬兰">Aalto University, Finland</span>
-                    </p>
+                <div class="ring" style="--p: 85">
+                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
+                    <span class="ring__label" data-en="Working" data-zh="熟练">Working</span>
+                    <span class="ring__name" data-en="English" data-zh="英语">English</span>
                 </div>
             </div>
 
-            <div class="contact">
-                <div class="contact__row">
-                    <span class="contact__item">
-                        <span class="contact__icon">✉</span>
-                        <a href="mailto:jiangkun.yu@aalto.fi">jiangkun.yu@aalto.fi</a>
-                    </span>
-                    <span class="contact__sep">·</span>
-                    <span class="contact__item">
-                        <span class="contact__icon">☏</span>
-                        <span data-en="+358 46 890 6497" data-zh="+86 178 5422 7548">+358 46 890 6497</span>
-                    </span>
-                    <span class="contact__sep">·</span>
-                    <span class="contact__item">
-                        <span class="contact__icon">⌂</span>
-                        <span data-en="Espoo, Finland" data-zh="埃斯波,芬兰">Espoo, Finland</span>
-                    </span>
-                </div>
-                <div class="contact__row">
-                    <span class="contact__item">
-                        <span class="contact__label">LinkedIn</span>
-                        <a href="https://linkedin.com/in/jiangkun-yu-5265a0278" target="_blank" rel="noopener">jiangkun-yu-5265a0278</a>
-                    </span>
-                    <span class="contact__sep">·</span>
-                    <span class="contact__item">
-                        <span class="contact__label">ORCID</span>
-                        <a href="https://orcid.org/0000-0002-8745-996X" target="_blank" rel="noopener">0000-0002-8745-996X</a>
-                    </span>
+            <h2 class="sidebar__heading" data-en="Core Expertise" data-zh="核心方向">Core Expertise</h2>
+            <ul class="checks">
+                <li data-en="Soft robotics & micromanipulation" data-zh="软体机器人与微操纵">Soft robotics & micromanipulation</li>
+                <li data-en="Control theory & system identification" data-zh="控制理论与系统辨识">Control theory & system identification</li>
+                <li data-en="Embedded systems · DSP · FPGA" data-zh="嵌入式系统 · DSP · FPGA">Embedded systems · DSP · FPGA</li>
+                <li data-en="Machine vision & learning" data-zh="机器视觉与机器学习">Machine vision & learning</li>
+                <li data-en="Python · MATLAB · C/C++" data-zh="Python · MATLAB · C/C++">Python · MATLAB · C/C++</li>
+                <li data-en="SolidWorks · PCB design · 3D printing" data-zh="SolidWorks · PCB 设计 · 3D 打印">SolidWorks · PCB design · 3D printing</li>
+            </ul>
+        </div>
+
+        <div class="sidebar__social">
+            <a href="https://linkedin.com/in/jiangkun-yu-5265a0278" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
+            <a href="https://orcid.org/0000-0002-8745-996X" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">iD</a>
+            <a href="mailto:jiangkun.yu@aalto.fi" aria-label="Email" title="Email">✉</a>
+        </div>
+    </aside>
+
+    <main class="page">
+
+        <!-- ============== HERO BANNER ============== -->
+        <header class="hero">
+            <div class="hero__grid" aria-hidden="true"></div>
+            <div class="hero__content">
+                <p class="hero__eyebrow" data-en="Aalto University · Finland" data-zh="阿尔托大学 · 芬兰">Aalto University · Finland</p>
+                <h2 class="hero__headline" data-en="Building fast, soft robots for the microscale." data-zh="为微观世界打造快速的软体机器人。">Building fast, soft robots for the microscale.</h2>
+                <p class="hero__code">
+                    <span class="hero__tag">&lt;code&gt;</span>
+                    <span data-en=" from concept and prototype to control and publication " data-zh=" 从概念、原型到控制与论文发表 "> from concept and prototype to control and publication </span><span class="hero__cursor" aria-hidden="true"></span>
+                    <span class="hero__tag">&lt;/code&gt;</span>
+                </p>
+                <div class="hero__actions">
+                    <a class="btn" href="#publications" data-en="View publications" data-zh="查看学术成果">View publications</a>
+                    <a class="btn btn--ghost" href="mailto:jiangkun.yu@aalto.fi" data-en="Get in touch" data-zh="联系我">Get in touch</a>
                 </div>
             </div>
         </header>
 
+        <!-- ============== STATS ============== -->
+        <section class="stats">
+            <div class="stat"><span class="stat__num">5</span><span class="stat__label" data-en="Research papers" data-zh="学术论文">Research papers</span></div>
+            <div class="stat"><span class="stat__num">5</span><span class="stat__label" data-en="Granted patents" data-zh="授权专利">Granted patents</span></div>
+            <div class="stat"><span class="stat__num">7</span><span class="stat__label" data-en="Students supervised" data-zh="指导学生">Students supervised</span></div>
+            <div class="stat"><span class="stat__num">10+</span><span class="stat__label" data-en="Honours & awards" data-zh="荣誉与奖项">Honours & awards</span></div>
+        </section>
+
         <!-- ============== SUMMARY ============== -->
-        <section class="card">
+        <section class="card" id="summary">
             <h2 class="card__title">
                 <span class="card__num">01</span>
                 <span data-en="Summary" data-zh="简介">Summary</span>
@@ -108,7 +133,7 @@
         </section>
 
         <!-- ============== EDUCATION ============== -->
-        <section class="card">
+        <section class="card" id="education">
             <h2 class="card__title">
                 <span class="card__num">02</span>
                 <span data-en="Education" data-zh="教育背景">Education</span>
@@ -161,7 +186,7 @@
         </section>
 
         <!-- ============== PUBLICATIONS ============== -->
-        <section class="card">
+        <section class="card" id="publications">
             <h2 class="card__title">
                 <span class="card__num">03</span>
                 <span data-en="Publications" data-zh="学术成果">Publications</span>
@@ -204,7 +229,7 @@
         </section>
 
         <!-- ============== CONFERENCES ============== -->
-        <section class="card">
+        <section class="card" id="conferences">
             <h2 class="card__title">
                 <span class="card__num">04</span>
                 <span data-en="Conference Presentations" data-zh="学术会议">Conference Presentations</span>
@@ -228,7 +253,7 @@
         </section>
 
         <!-- ============== PROJECTS ============== -->
-        <section class="card">
+        <section class="card" id="projects">
             <h2 class="card__title">
                 <span class="card__num">05</span>
                 <span data-en="Selected Research Projects" data-zh="项目经历">Selected Research Projects</span>
@@ -328,7 +353,7 @@
         </section>
 
         <!-- ============== TEACHING ============== -->
-        <section class="card">
+        <section class="card" id="teaching">
             <h2 class="card__title">
                 <span class="card__num">06</span>
                 <span data-en="Teaching and Supervision" data-zh="教学和组织">Teaching and Supervision</span>
@@ -372,7 +397,7 @@
         </section>
 
         <!-- ============== HONOURS ============== -->
-        <section class="card">
+        <section class="card" id="honours">
             <h2 class="card__title">
                 <span class="card__num">07</span>
                 <span data-en="Honours and Awards" data-zh="荣誉与奖项">Honours and Awards</span>
@@ -423,7 +448,7 @@
         </section>
 
         <!-- ============== SKILLS ============== -->
-        <section class="card">
+        <section class="card" id="skills">
             <h2 class="card__title">
                 <span class="card__num">08</span>
                 <span data-en="Skills and Technologies" data-zh="技能">Skills and Technologies</span>
@@ -488,6 +513,8 @@
         </footer>
 
     </main>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
