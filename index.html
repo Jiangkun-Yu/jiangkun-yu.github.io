@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,72 +31,28 @@
             <p class="sidebar__role" data-en="Robotics & Autonomous Systems" data-zh="机器人与自主系统">Robotics & Autonomous Systems</p>
         </div>
 
-        <div class="sidebar__scroll">
-            <ul class="info">
-                <li><span class="info__k" data-en="Affiliation:" data-zh="单位:">Affiliation:</span><span class="info__v" data-en="Aalto University" data-zh="阿尔托大学">Aalto University</span></li>
-                <li><span class="info__k" data-en="City:" data-zh="城市:">City:</span><span class="info__v" data-en="Espoo, Finland" data-zh="埃斯波,芬兰">Espoo, Finland</span></li>
-                <li><span class="info__k" data-en="Phone:" data-zh="电话:">Phone:</span><span class="info__v" data-en="+358 46 890 6497" data-zh="+86 178 5422 7548">+358 46 890 6497</span></li>
-                <li><span class="info__k" data-en="Email:" data-zh="邮箱:">Email:</span><a class="info__v" href="mailto:jiangkun.yu@aalto.fi">jiangkun.yu@aalto.fi</a></li>
-            </ul>
-
-            <!-- Main fields: change --p (0–100) to adjust how full each ring is -->
-            <div class="rings">
-                <div class="ring" style="--p: 95">
-                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
-                    <span class="ring__label">95%</span>
-                    <span class="ring__name" data-en="Soft Robotics" data-zh="软体机器人">Soft Robotics</span>
-                </div>
-                <div class="ring" style="--p: 90">
-                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
-                    <span class="ring__label">90%</span>
-                    <span class="ring__name" data-en="Control" data-zh="控制">Control</span>
-                </div>
-                <div class="ring" style="--p: 85">
-                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
-                    <span class="ring__label">85%</span>
-                    <span class="ring__name" data-en="Embedded" data-zh="嵌入式">Embedded</span>
-                </div>
-            </div>
-
-            <h2 class="sidebar__heading" data-en="Core Expertise" data-zh="核心方向">Core Expertise</h2>
-            <ul class="checks">
-                <li data-en="Soft robotics & micromanipulation" data-zh="软体机器人与微操纵">Soft robotics & micromanipulation</li>
-                <li data-en="Control theory & system identification" data-zh="控制理论与系统辨识">Control theory & system identification</li>
-                <li data-en="Embedded systems · DSP · FPGA" data-zh="嵌入式系统 · DSP · FPGA">Embedded systems · DSP · FPGA</li>
-                <li data-en="Machine vision & learning" data-zh="机器视觉与机器学习">Machine vision & learning</li>
-                <li data-en="Python · MATLAB · C/C++" data-zh="Python · MATLAB · C/C++">Python · MATLAB · C/C++</li>
-                <li data-en="SolidWorks · PCB design · 3D printing" data-zh="SolidWorks · PCB 设计 · 3D 打印">SolidWorks · PCB design · 3D printing</li>
-            </ul>
-
-            <h2 class="sidebar__heading" data-en="Languages" data-zh="语言">Languages</h2>
-            <ul class="info info--plain">
-                <li><span class="info__k" data-en="Chinese" data-zh="中文">Chinese</span><span class="info__v" data-en="Native" data-zh="母语">Native</span></li>
-                <li><span class="info__k" data-en="English" data-zh="英语">English</span><span class="info__v" data-en="Working proficiency" data-zh="熟练">Working proficiency</span></li>
-            </ul>
-        </div>
+        <!-- ============== OUTLINE (section navigator) ============== -->
+        <nav class="sidebar__scroll outline" aria-label="Page outline">
+            <p class="outline__heading" data-en="Outline" data-zh="目录">Outline</p>
+            <ol class="outline__list">
+                <li><a href="#top" data-en="Home" data-zh="首页">Home</a></li>
+                <li><a href="#summary" data-en="Summary" data-zh="简介">Summary</a></li>
+                <li><a href="#education" data-en="Education" data-zh="教育背景">Education</a></li>
+                <li><a href="#publications" data-en="Publications" data-zh="学术成果">Publications</a></li>
+                <li><a href="#conferences" data-en="Conferences" data-zh="学术会议">Conferences</a></li>
+                <li><a href="#projects" data-en="Research Projects" data-zh="项目经历">Research Projects</a></li>
+                <li><a href="#teaching" data-en="Teaching" data-zh="教学和组织">Teaching</a></li>
+                <li><a href="#honours" data-en="Honours & Awards" data-zh="荣誉与奖项">Honours & Awards</a></li>
+                <li><a href="#skills" data-en="Skills" data-zh="技能">Skills</a></li>
+            </ol>
+        </nav>
 
         <div class="sidebar__social">
             <a href="https://linkedin.com/in/jiangkun-yu-5265a0278" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
             <a href="https://orcid.org/0000-0002-8745-996X" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">iD</a>
-            <a href="mailto:jiangkun.yu@aalto.fi" aria-label="Email" title="Email">✉</a>
+            <a href="mailto:jiangkun.yu@aalto.fi" aria-label="Email" title="Email: jiangkun.yu@aalto.fi">✉</a>
         </div>
     </aside>
-
-    <!-- ============== OUTLINE (section navigator) ============== -->
-    <nav class="outline" aria-label="Page outline">
-        <p class="outline__heading" data-en="Outline" data-zh="目录">Outline</p>
-        <ol class="outline__list">
-            <li><a href="#top" data-en="Home" data-zh="首页">Home</a></li>
-            <li><a href="#summary" data-en="Summary" data-zh="简介">Summary</a></li>
-            <li><a href="#education" data-en="Education" data-zh="教育背景">Education</a></li>
-            <li><a href="#publications" data-en="Publications" data-zh="学术成果">Publications</a></li>
-            <li><a href="#conferences" data-en="Conferences" data-zh="学术会议">Conferences</a></li>
-            <li><a href="#projects" data-en="Research Projects" data-zh="项目经历">Research Projects</a></li>
-            <li><a href="#teaching" data-en="Teaching" data-zh="教学和组织">Teaching</a></li>
-            <li><a href="#honours" data-en="Honours & Awards" data-zh="荣誉与奖项">Honours & Awards</a></li>
-            <li><a href="#skills" data-en="Skills" data-zh="技能">Skills</a></li>
-        </ol>
-    </nav>
 
     <main class="page" id="top">
 
@@ -118,12 +74,49 @@
             </div>
         </header>
 
-        <!-- ============== STATS ============== -->
-        <section class="stats">
-            <div class="stat"><span class="stat__num">5</span><span class="stat__label" data-en="Research papers" data-zh="学术论文">Research papers</span></div>
-            <div class="stat"><span class="stat__num">5</span><span class="stat__label" data-en="Granted patents" data-zh="授权专利">Granted patents</span></div>
-            <div class="stat"><span class="stat__num">7</span><span class="stat__label" data-en="Students supervised" data-zh="指导学生">Students supervised</span></div>
-            <div class="stat"><span class="stat__num">10+</span><span class="stat__label" data-en="Honours & awards" data-zh="荣誉与奖项">Honours & awards</span></div>
+        <!-- ============== MAIN SKILLS ============== -->
+        <!-- change --p (0–100) and the % label to adjust each ring -->
+        <section class="fields">
+            <div class="field">
+                <div class="ring" style="--p: 95">
+                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
+                    <span class="ring__label">95%</span>
+                </div>
+                <div class="field__text">
+                    <h3 class="field__name" data-en="Soft Robotics" data-zh="软体机器人">Soft Robotics</h3>
+                    <p class="field__desc" data-en="Micromanipulators · FilMBot" data-zh="微操纵器 · FilMBot">Micromanipulators · FilMBot</p>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ring" style="--p: 90">
+                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
+                    <span class="ring__label">90%</span>
+                </div>
+                <div class="field__text">
+                    <h3 class="field__name" data-en="Control" data-zh="控制">Control</h3>
+                    <p class="field__desc" data-en="System ID · State observers" data-zh="系统辨识 · 状态观测器">System ID · State observers</p>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ring" style="--p: 85">
+                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
+                    <span class="ring__label">85%</span>
+                </div>
+                <div class="field__text">
+                    <h3 class="field__name" data-en="Embedded Systems" data-zh="嵌入式系统">Embedded Systems</h3>
+                    <p class="field__desc" data-en="DSP · FPGA · STM32 · PCB" data-zh="DSP · FPGA · STM32 · PCB">DSP · FPGA · STM32 · PCB</p>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ring" style="--p: 85">
+                    <svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ring__bg" cx="18" cy="18" r="15.9"/><circle class="ring__fg" cx="18" cy="18" r="15.9"/></svg>
+                    <span class="ring__label">85%</span>
+                </div>
+                <div class="field__text">
+                    <h3 class="field__name" data-en="Programming" data-zh="编程">Programming</h3>
+                    <p class="field__desc" data-en="Python · MATLAB · C/C++" data-zh="Python · MATLAB · C/C++">Python · MATLAB · C/C++</p>
+                </div>
+            </div>
         </section>
 
         <!-- ============== SUMMARY ============== -->
@@ -537,6 +530,10 @@
             </p>
             <p class="footer__contact">
                 <a href="mailto:jiangkun.yu@aalto.fi">jiangkun.yu@aalto.fi</a>
+                <span class="footer__sep">·</span>
+                <span data-en="+358 46 890 6497" data-zh="+86 178 5422 7548">+358 46 890 6497</span>
+                <span class="footer__sep">·</span>
+                <span data-en="Espoo, Finland" data-zh="埃斯波,芬兰">Espoo, Finland</span>
             </p>
         </footer>
 
@@ -544,6 +541,6 @@
 
     </div>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>
