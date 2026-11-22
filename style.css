@@ -183,6 +183,20 @@ strong {
     line-height: 1.55;
 }
 
+.sidebar__meta {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    font-size: 13.5px;
+    color: var(--ink-mute);
+    line-height: 1.6;
+}
+
+/* Items that only exist in the Chinese version */
+body:not(.lang-zh) .zh-only {
+    display: none;
+}
+
 .sidebar__scroll {
     flex: 1;
     overflow-y: auto;
@@ -373,6 +387,58 @@ strong {
 
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+.hero__lead {
+    font-size: 18px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 640px;
+    margin-bottom: 24px;
+}
+
+/* keyword chips */
+.chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.chips li {
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.chips li:hover {
+    border-color: var(--accent);
+    color: var(--accent-2);
+}
+
+.hero__status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent-2);
+    margin-bottom: 30px;
+}
+
+.hero__status-dot {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #6fdc8c;
+    box-shadow: 0 0 0 4px rgba(111, 220, 140, 0.18);
 }
 
 .hero__actions {
@@ -683,6 +749,45 @@ ul.pub-list li::before,
 .pub-list em.journal-top {
     color: var(--accent);
     font-weight: 600;
+}
+
+.pub-list a {
+    word-break: break-all;
+}
+
+.pub-note {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-2);
+}
+
+/* -------- Languages -------- */
+.lang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.lang-item {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    background: var(--panel-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+}
+
+.lang-item__name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.lang-item__level {
+    font-size: 15.5px;
+    color: var(--ink-soft);
 }
 
 .tag {

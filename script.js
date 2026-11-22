@@ -28,8 +28,8 @@
 
         // Update document title
         document.title = lang === 'zh'
-            ? '于江坤 | 机器人方向博士研究生'
-            : 'Jiangkun Yu | Doctoral Researcher in Robotics';
+            ? '于江坤 | 机器人研究者与研发工程师'
+            : 'Jiangkun Yu | Robotics Researcher & R&D Engineer';
 
         try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
     }
