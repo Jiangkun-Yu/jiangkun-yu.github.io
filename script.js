@@ -28,7 +28,7 @@
 
         // Update document title
         document.title = lang === 'zh'
-            ? '于江坤 | 机器人研究者与研发工程师'
+            ? '于江坤 | 机器人科研人员与研发工程师'
             : 'Jiangkun Yu | Robotics Researcher & R&D Engineer';
 
         try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
