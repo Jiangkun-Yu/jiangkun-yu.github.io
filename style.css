@@ -574,21 +574,22 @@ body:not(.lang-zh) .zh-only {
     display: flex;
     align-items: baseline;
     gap: 14px;
-    font-size: 25px;
+    font-size: 29px;
     font-weight: 600;
     color: var(--ink);
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 }
 
 .card__num {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--accent);
     letter-spacing: 0.1em;
 }
 
 .card__body {
-    font-size: 17px;
+    font-size: 18.5px;
+    line-height: 1.75;
     color: var(--ink-soft);
 }
 
@@ -630,7 +631,7 @@ body:not(.lang-zh) .zh-only {
 }
 
 .entry__title {
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 600;
     color: var(--ink);
 }
@@ -638,7 +639,7 @@ body:not(.lang-zh) .zh-only {
 .entry__date {
     display: inline-block;
     padding: 3px 12px;
-    font-size: 13.5px;
+    font-size: 14.5px;
     font-weight: 600;
     color: var(--accent);
     background: var(--accent-bg);
@@ -647,14 +648,14 @@ body:not(.lang-zh) .zh-only {
 }
 
 .entry__role {
-    font-size: 16.5px;
+    font-size: 18.5px;
     font-weight: 500;
     color: var(--ink);
     margin-bottom: 2px;
 }
 
 .entry__sub {
-    font-size: 15px;
+    font-size: 16.5px;
     color: var(--ink-mute);
     margin-bottom: 6px;
 }
@@ -666,9 +667,9 @@ body:not(.lang-zh) .zh-only {
 
 .entry__list li {
     position: relative;
-    padding-left: 18px;
-    margin-bottom: 5px;
-    font-size: 16.5px;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    font-size: 18px;
     color: var(--ink-soft);
 }
 
@@ -683,7 +684,7 @@ body:not(.lang-zh) .zh-only {
 
 /* -------- Sub titles -------- */
 .sub-title {
-    font-size: 15px;
+    font-size: 16.5px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -704,9 +705,9 @@ body:not(.lang-zh) .zh-only {
 .pub-list li,
 .simple-list li {
     position: relative;
-    padding-left: 38px;
-    margin-bottom: 13px;
-    font-size: 16.5px;
+    padding-left: 40px;
+    margin-bottom: 14px;
+    font-size: 18px;
     color: var(--ink-soft);
 }
 
@@ -722,8 +723,8 @@ ol.pub-list li::before {
     content: counter(pubcount, decimal-leading-zero);
     position: absolute;
     left: 0;
-    top: 1px;
-    font-size: 14px;
+    top: 2px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--accent);
 }
@@ -758,7 +759,7 @@ ul.pub-list li::before,
 .pub-note {
     display: block;
     margin-top: 3px;
-    font-size: 14px;
+    font-size: 15.5px;
     font-weight: 500;
     color: var(--accent-2);
 }
@@ -780,13 +781,13 @@ ul.pub-list li::before,
 }
 
 .lang-item__name {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--ink);
 }
 
 .lang-item__level {
-    font-size: 15.5px;
+    font-size: 17.5px;
     color: var(--ink-soft);
 }
 
@@ -829,14 +830,14 @@ ul.pub-list li::before,
 }
 
 .skill-card__title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--ink);
     margin-bottom: 10px;
 }
 
 .skill-card p {
-    font-size: 16px;
+    font-size: 17.5px;
     color: var(--ink-soft);
     line-height: 1.7;
 }
@@ -943,14 +944,15 @@ ul.pub-list li::before,
     }
 
     .card__title {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .card__body,
     .entry__list li,
     .pub-list li,
-    .simple-list li {
-        font-size: 16px;
+    .simple-list li,
+    .skill-card p {
+        font-size: 17px;
     }
 
     .entry__head {
