@@ -730,7 +730,7 @@ body:not(.lang-zh) .zh-only {
     max-width: 42%;
     object-fit: contain;
     object-position: center top;
-    opacity: 0.5;
+    opacity: 0.85;
     -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
     mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
     pointer-events: none;
@@ -740,6 +740,10 @@ body:not(.lang-zh) .zh-only {
     position: relative;
     z-index: 1;
     max-width: 64%;
+}
+
+.slide--intro .entry__list {
+    margin: 6px 0 12px;
 }
 
 .slide__lead {
