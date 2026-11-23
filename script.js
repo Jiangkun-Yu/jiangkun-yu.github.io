@@ -81,45 +81,27 @@
     updateActive();
 
     /* =========================================================
-       Project media — hover preview on the cover, click to open
-       a lightbox gallery built from the thumbnails.
+       Lightbox — click an image with [data-zoom] to view it full screen
        ========================================================= */
     const lightbox = document.getElementById('lightbox');
     const lbStage  = lightbox.querySelector('.lightbox__stage');
     const lbCount  = lightbox.querySelector('.lightbox__count');
     const lbText   = lightbox.querySelector('.lightbox__text');
-    let lbItems = [];
-    let lbIndex = 0;
     let lastFocus = null;
 
-    function renderLightbox() {
-        const item = lbItems[lbIndex];
-        const lang = bodyEl.classList.contains('lang-zh') ? 'zh' : 'en';
-        lbStage.innerHTML = '';
-        let el;
-        if (item.dataset.type === 'video') {
-            el = document.createElement('video');
-            el.src = item.dataset.src;
-            el.controls = true;
-            el.autoplay = true;
-            el.playsInline = true;
-        } else {
-            el = document.createElement('img');
-            el.src = item.dataset.src;
-            el.alt = item.dataset['caption' + (lang === 'zh' ? 'Zh' : 'En')] || '';
-        }
-        lbStage.appendChild(el);
-        lbCount.textContent = (lbIndex + 1) + ' / ' + lbItems.length;
-        lbText.textContent = item.dataset['caption' + (lang === 'zh' ? 'Zh' : 'En')] || '';
-        const multi = lbItems.length > 1;
-        lightbox.querySelectorAll('.lightbox__nav').forEach(b => { b.hidden = !multi; });
-    }
+    lightbox.querySelectorAll('.lightbox__nav').forEach(b => { b.hidden = true; });
 
-    function openLightbox(items, index) {
-        lbItems = items;
-        lbIndex = index;
+    function openLightbox(trigger) {
         lastFocus = document.activeElement;
-        renderLightbox();
+        const img = document.createElement('img');
+        img.src = trigger.dataset.zoom;
+        const slide = trigger.closest('.slide');
+        const title = slide && slide.querySelector('.slide__title');
+        img.alt = title ? title.textContent : '';
+        lbStage.innerHTML = '';
+        lbStage.appendChild(img);
+        lbCount.textContent = '';
+        lbText.textContent = title ? title.textContent : '';
         lightbox.hidden = false;
         bodyEl.classList.add('lightbox-open');
         lightbox.querySelector('.lightbox__close').focus();
@@ -127,58 +109,96 @@
 
     function closeLightbox() {
         lightbox.hidden = true;
-        lbStage.innerHTML = '';          // stops any playing video
+        lbStage.innerHTML = '';
         bodyEl.classList.remove('lightbox-open');
         if (lastFocus) lastFocus.focus();
     }
 
-    function stepLightbox(delta) {
-        lbIndex = (lbIndex + delta + lbItems.length) % lbItems.length;
-        renderLightbox();
-    }
-
     lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
-    lightbox.querySelector('.lightbox__nav--prev').addEventListener('click', () => stepLightbox(-1));
-    lightbox.querySelector('.lightbox__nav--next').addEventListener('click', () => stepLightbox(1));
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => {
-        if (lightbox.hidden) return;
-        if (e.key === 'Escape') closeLightbox();
-        else if (e.key === 'ArrowLeft') stepLightbox(-1);
-        else if (e.key === 'ArrowRight') stepLightbox(1);
+        if (!lightbox.hidden && e.key === 'Escape') closeLightbox();
+    });
+    document.querySelectorAll('[data-zoom]').forEach(b => {
+        b.addEventListener('click', () => openLightbox(b));
     });
 
-    document.querySelectorAll('.media').forEach(media => {
-        const thumbs = Array.from(media.querySelectorAll('.thumb'));
-        const cover  = media.querySelector('.media__cover');
+    /* =========================================================
+       Project sliders — arrows, tabs, keyboard and swipe
+       ========================================================= */
+    document.querySelectorAll('.slider').forEach(slider => {
+        const viewport = slider.querySelector('.slider__viewport');
+        const track    = slider.querySelector('.slider__track');
+        const slides   = Array.from(slider.querySelectorAll('.slide'));
+        const prevBtn  = slider.querySelector('.slider__arrow--prev');
+        const nextBtn  = slider.querySelector('.slider__arrow--next');
+        const tabsEl   = slider.querySelector('.slider__tabs');
+        const isZh     = () => bodyEl.classList.contains('lang-zh');
+        let index = 0;
 
-        thumbs.forEach((t, i) => t.addEventListener('click', () => openLightbox(thumbs, i)));
-
-        if (!cover) return;
-        cover.addEventListener('click', () => openLightbox(thumbs, Number(cover.dataset.open || 0)));
-
-        // Hover preview: a muted looping clip fades in over the cover image.
-        // The clip is only downloaded the first time someone hovers.
-        const previewSrc = cover.dataset.preview;
-        if (!previewSrc || !window.matchMedia('(hover: hover)').matches) return;
-        let vid = null;
-        cover.addEventListener('mouseenter', () => {
-            if (!vid) {
-                vid = document.createElement('video');
-                vid.src = previewSrc;
-                vid.muted = true;
-                vid.loop = true;
-                vid.playsInline = true;
-                cover.appendChild(vid);
-            }
-            const p = vid.play();
-            if (p && p.catch) p.catch(() => {});
-            cover.classList.add('is-previewing');
+        // Build one tab per slide. data-en / data-zh let the language toggle relabel them.
+        const tabs = slides.map((s, k) => {
+            const t = document.createElement('button');
+            t.type = 'button';
+            t.className = 'slider__tab';
+            t.dataset.en = s.dataset.labelEn || String(k + 1);
+            t.dataset.zh = s.dataset.labelZh || t.dataset.en;
+            t.textContent = isZh() ? t.dataset.zh : t.dataset.en;
+            t.addEventListener('click', () => go(k));
+            tabsEl.appendChild(t);
+            return t;
         });
-        cover.addEventListener('mouseleave', () => {
-            cover.classList.remove('is-previewing');
-            if (vid) vid.pause();
+
+        function fitHeight() {
+            viewport.style.height = slides[index].offsetHeight + 'px';
+        }
+
+        function go(k) {
+            index = Math.max(0, Math.min(slides.length - 1, k));
+            track.style.transform = 'translateX(' + (-index * 100) + '%)';
+            fitHeight();
+            tabs.forEach((t, i) => t.classList.toggle('is-active', i === index));
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === slides.length - 1;
+            slider.classList.toggle('is-start', index === 0);
+            // pause any video that is no longer visible
+            slides.forEach((s, i) => {
+                if (i !== index) s.querySelectorAll('video').forEach(v => v.pause());
+            });
+        }
+
+        prevBtn.addEventListener('click', () => go(index - 1));
+        nextBtn.addEventListener('click', () => go(index + 1));
+
+        slider.addEventListener('keydown', e => {
+            if (e.target.tagName === 'VIDEO') return;
+            if (e.key === 'ArrowRight') { go(index + 1); e.preventDefault(); }
+            if (e.key === 'ArrowLeft')  { go(index - 1); e.preventDefault(); }
         });
+
+        // touch swipe
+        let startX = null;
+        viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        viewport.addEventListener('touchend', e => {
+            if (startX === null) return;
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 50) go(index + (dx < 0 ? 1 : -1));
+            startX = null;
+        });
+
+        // keep the height right when images/videos load or the window resizes
+        if ('ResizeObserver' in window) {
+            const ro = new ResizeObserver(fitHeight);
+            slides.forEach(s => ro.observe(s));
+        } else {
+            window.addEventListener('resize', fitHeight);
+            slider.querySelectorAll('img, video').forEach(m => {
+                m.addEventListener('load', fitHeight);
+                m.addEventListener('loadedmetadata', fitHeight);
+            });
+        }
+
+        go(0);
     });
 
 })();
