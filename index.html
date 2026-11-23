@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=14">
+    <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 
@@ -152,26 +152,21 @@
                     <span data-en=" with multidisciplinary experience developing complete robotic and mechatronic systems — from "
                           data-zh=",具备跨学科背景,能够独立完成从"></span>
                     <strong data-en="mechanism and electronics design to embedded programming, control algorithms, sensing, prototyping and experimental validation"
-                            data-zh="机构与电路设计、嵌入式编程、控制算法、感知到原型开发与实验验证"></strong>
-                    <span data-en="." data-zh="的完整机器人与机电系统研发,并具备独立开展科研课题、定量实验分析及撰写学术论文的能力。"></span>
+                            data-zh="机构与电路设计、嵌入式编程、控制算法、感知到原型开发与实验验证"></strong><span data-en="." data-zh="的完整机器人与机电系统研发,并具备独立开展科研课题、定量实验分析及撰写学术论文的能力。"></span>
                 </p>
                 <p>
                     <span data-en="Led the development of " data-zh="博士期间主导研发了"></span>
                     <strong data-en="FilMBot, a high-speed soft robotic micromanipulator" data-zh="高速软体并联微操纵器 FilMBot"></strong>
                     <span data-en=" achieving " data-zh=",实现了"></span>
-                    <strong data-en="meter-per-second-level motion with micrometer-scale positioning precision" data-zh="米每秒级运动速度与微米级定位精度"></strong>
-                    <span data-en=", published as a first-author paper in " data-zh=",并以第一作者在机器人领域顶级期刊 "></span>
-                    <strong data-en="IEEE Transactions on Robotics" data-zh="IEEE Transactions on Robotics"></strong>
-                    <span data-en=". Background also includes aerospace servo control, embedded system development and competitive robotics."
+                    <strong data-en="meter-per-second-level motion with micrometer-scale positioning precision" data-zh="米每秒级运动速度与微米级定位精度"></strong><span data-en=", published as a first-author paper in " data-zh=",并以第一作者在机器人领域顶级期刊 "></span>
+                    <strong data-en="IEEE Transactions on Robotics" data-zh="IEEE Transactions on Robotics"></strong><span data-en=". Background also includes aerospace servo control, embedded system development and competitive robotics."
                           data-zh=" 发表论文。此外具有航天伺服控制、嵌入式系统开发及机器人竞赛经历。"></span>
                 </p>
                 <p>
                     <span data-en="Reviewer for " data-zh="担任 "></span>
-                    <strong data-en="IEEE Robotics and Automation Letters (R-AL) and IEEE ICRA" data-zh="IEEE Robotics and Automation Letters(R-AL)期刊与 IEEE ICRA 会议"></strong>
-                    <span data-en=", with experience in international research collaboration and robotics teaching. PhD expected in "
+                    <strong data-en="IEEE Robotics and Automation Letters (R-AL) and IEEE ICRA" data-zh="IEEE Robotics and Automation Letters(R-AL)期刊与 IEEE ICRA 会议"></strong><span data-en=", with experience in international research collaboration and robotics teaching. PhD expected in "
                           data-zh=" 审稿人,具有国际化科研合作及机器人课程教学经验。预计 "></span>
-                    <strong data-en="March 2027" data-zh="2027 年 3 月"></strong>
-                    <span data-en="." data-zh="博士毕业。"></span>
+                    <strong data-en="March 2027" data-zh="2027 年 3 月"></strong><span data-en="." data-zh="博士毕业。"></span>
                 </p>
             </div>
         </section>
@@ -304,23 +299,35 @@
                         <div class="slider__viewport">
                             <div class="slider__track">
 
-                                <!-- 1. Overview -->
+                                <!-- 1. Overview: text + large faded robot (transparent PNG) on the right -->
                                 <section class="slide slide--intro">
-                                    <img class="slide__bg" src="assets/projects%20photos/FilMBot_Cover.jpg" alt="" aria-hidden="true">
+                                    <img class="slide__bg" src="assets/projects%20photos/FilMBot_Cover.png" alt="" aria-hidden="true">
                                     <div class="slide__body">
                                         <p class="entry__role" data-en="Funded by the Research Council of Finland" data-zh="芬兰科学院资助项目"></p>
+                                        <p class="slide__lead">
+                                            <strong class="hl" data-en="FilMBot" data-zh="FilMBot"></strong>
+                                            <span data-en=" is a centimeter-scale soft parallel micromanipulator: electromagnetic coils drive magnets on "
+                                                  data-zh=" 是一种厘米尺度的软体并联微操纵器:电磁线圈驱动粘贴在"></span>
+                                            <strong data-en="polypropylene film legs" data-zh="聚丙烯薄膜腿"></strong><span data-en=", which bend as compliant joints." data-zh="上的磁铁,薄膜腿作为柔顺关节弯曲。"></span>
+                                        </p>
+                                        <div class="slide__stats">
+                                            <div class="stat"><span class="stat__num">&gt; 4×</span><span class="stat__label" data-en="faster than rigid robots of similar size" data-zh="快于同尺寸刚性机器人"></span></div>
+                                            <div class="stat"><span class="stat__num">µm</span><span class="stat__label" data-en="precision, on par with rigid micromanipulators" data-zh="级精度,与刚性微操纵器相当"></span></div>
+                                            <div class="stat"><span class="stat__num">≈ 100 €</span><span class="stat__label" data-en="open-source DIY version on GitHub" data-zh="开源 DIY 版本(GitHub)"></span></div>
+                                        </div>
                                         <ul class="entry__list">
                                             <li>
-                                                <strong data-en="Main implementer:" data-zh="项目主要实施人:"></strong>
-                                                <span data-en=" " data-zh="以第一作者完成 "></span>
+                                                <strong class="hl" data-en="Main implementer" data-zh="项目主要实施人"></strong>
+                                                <span data-en=" · " data-zh=" · 以第一作者完成 "></span>
                                                 <strong data-en="5 first-author papers" data-zh="5 篇研究论文"></strong>
                                                 <span data-en=" (2 under review), incl. " data-zh="(2 篇在投),包括 "></span>
                                                 <strong data-en="IEEE T-RO" data-zh="IEEE T-RO"></strong><span data-en="." data-zh=" 论文。"></span>
                                             </li>
-                                            <li data-en="Centimeter-scale soft robot with meter-per-second speed and micrometer precision."
-                                                data-zh="厘米尺度软体机器人,实现米每秒级速度与微米级精度。"></li>
-                                            <li data-en="End-to-end: actuation, compliant mechanism, embedded control, onboard vision."
-                                                data-zh="端到端研发:驱动、柔顺机构、嵌入式控制、机载视觉。"></li>
+                                            <li>
+                                                <strong class="hl" data-en="End-to-end" data-zh="端到端研发"></strong>
+                                                <span data-en=" · actuation, compliant mechanism, embedded control and onboard vision."
+                                                      data-zh=" · 驱动、柔顺机构、嵌入式控制与机载视觉。"></span>
+                                            </li>
                                         </ul>
                                         <p class="slide__hint">
                                             <span data-en="Click → to see details, photos and videos" data-zh="点击 → 查看细节、图片与视频">Click → to see details, photos and videos</span>
@@ -328,23 +335,31 @@
                                     </div>
                                 </section>
 
-                                <!-- 2. Details + design figure -->
+                                <!-- 2. Design & development + figure -->
                                 <section class="slide slide--split">
                                     <div class="slide__text">
-                                        <h4 class="slide__title" data-en="Details" data-zh="项目细节"></h4>
+                                        <h4 class="slide__title" data-en="Design & development" data-zh="设计与研发"></h4>
                                         <ul class="entry__list">
-                                            <li data-en="Contributed to the grant proposal; as main implementer, led design, development and experiments."
-                                                data-zh="参与项目申请书撰写;作为主要实施人主导设计、研发与实验研究。"></li>
-                                            <li data-en="Electromagnetic actuation, compliant mechanism design, electronics integration and embedded control."
-                                                data-zh="电磁驱动、柔顺机构设计、电子集成与嵌入式控制。"></li>
-                                            <li data-en="Micrometer positioning precision and meter-per-second-level speed with a centimeter-scale robot."
-                                                data-zh="以厘米尺度机器人实现微米级定位精度与米每秒级运动速度。"></li>
-                                            <li data-en="Dynamic modelling, system identification, hybrid control and high-frequency trajectory tracking."
-                                                data-zh="动力学建模、系统辨识、混合控制与高频轨迹跟踪。"></li>
-                                            <li data-en="Onboard vision: camera integration, image processing and real-time position estimation."
-                                                data-zh="机载视觉:相机集成、图像处理与实时位置估计。"></li>
-                                            <li data-en="Prototyping with CAD, 3D printing and laser cutting; open-source DIY version for about 100 euros."
-                                                data-zh="利用 CAD、3D 打印、激光切割完成原型;开源 DIY 版本成本约 100 欧元。"></li>
+                                            <li>
+                                                <strong class="hl" data-en="Role" data-zh="角色"></strong>
+                                                <span data-en=" · Contributed to the grant proposal; as " data-zh=" · 参与项目申请书撰写;作为"></span>
+                                                <strong data-en="main implementer" data-zh="主要实施人"></strong><span data-en=", led design, development and experiments." data-zh=",主导设计、研发与实验研究。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Hardware" data-zh="硬件"></strong>
+                                                <span data-en=" · " data-zh=" · "></span>
+                                                <strong data-en="Electromagnetic actuation" data-zh="电磁驱动"></strong><span data-en=", compliant film-leg mechanism and electronics integration." data-zh="、柔顺薄膜腿机构与电子集成。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Control" data-zh="控制"></strong>
+                                                <span data-en=" · Dynamic modelling, " data-zh=" · 动力学建模、"></span>
+                                                <strong data-en="system identification" data-zh="系统辨识"></strong><span data-en=", hybrid control and embedded implementation." data-zh="、混合控制与嵌入式实现。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Prototyping" data-zh="原型"></strong>
+                                                <span data-en=" · CAD, 3D printing and laser cutting; " data-zh=" · CAD、3D 打印与激光切割;"></span>
+                                                <strong data-en="open-source build for about 100 €" data-zh="开源版本成本约 100 欧元"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
                                         </ul>
                                     </div>
                                     <figure class="slide__fig">
@@ -357,26 +372,49 @@
                                     </figure>
                                 </section>
 
-                                <!-- 3. Videos -->
-                                <section class="slide slide--videos">
-                                    <figure class="slide__fig">
-                                        <div class="slide__media">
-                                            <video src="assets/projects%20photos/FilMBot_Video2.mp4#t=3" controls muted playsinline preload="metadata"></video>
-                                        </div>
-                                        <figcaption>
-                                            <strong data-en="High-frequency motion" data-zh="高频运动"></strong>
-                                            <span data-en=" · Circular trajectories at 1 Hz and 10 Hz, real time (0:31)." data-zh=" · 1 Hz 与 10 Hz 圆形轨迹,实时速度(0:31)。"></span>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="slide__fig">
-                                        <div class="slide__media">
-                                            <video src="assets/projects%20photos/FilMBot_Video1.mp4#t=4" controls muted playsinline preload="metadata"></video>
-                                        </div>
-                                        <figcaption>
-                                            <strong data-en="Low-cost fabrication" data-zh="低成本制作"></strong>
-                                            <span data-en=" · From polypropylene film to a working robot (1:54)." data-zh=" · 从聚丙烯薄膜到完整的机器人(1:54)。"></span>
-                                        </figcaption>
-                                    </figure>
+                                <!-- 3. Experiments: short text + videos side by side -->
+                                <section class="slide slide--media">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Experiments & applications" data-zh="实验与应用"></h4>
+                                        <ul class="entry__list slide__points">
+                                            <li>
+                                                <strong class="hl" data-en="Speed" data-zh="速度"></strong>
+                                                <span data-en=" · Tracks circular trajectories at " data-zh=" · 实时跟踪 "></span>
+                                                <strong data-en="1 Hz and 10 Hz" data-zh="1 Hz 与 10 Hz"></strong>
+                                                <span data-en=" in real time." data-zh=" 圆形轨迹。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Vision" data-zh="视觉"></strong>
+                                                <span data-en=" · Onboard camera, image processing and " data-zh=" · 机载相机、图像处理与"></span>
+                                                <strong data-en="real-time position estimation" data-zh="实时位置估计"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Applications" data-zh="应用"></strong>
+                                                <span data-en=" · Transient force strong enough to " data-zh=" · 瞬态力足以"></span>
+                                                <strong data-en="puncture tissue" data-zh="刺穿组织"></strong><span data-en=", towards bio-sampling and micro-dosing." data-zh=",可用于生物采样与微量给药。"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="slide__videos">
+                                        <figure class="slide__fig">
+                                            <div class="slide__media">
+                                                <video src="assets/projects%20photos/FilMBot_Video2.mp4#t=3" controls muted playsinline preload="metadata"></video>
+                                            </div>
+                                            <figcaption>
+                                                <strong data-en="High-frequency motion" data-zh="高频运动"></strong>
+                                                <span data-en=" · 1 Hz and 10 Hz circles, real time (0:31)." data-zh=" · 1 Hz 与 10 Hz 圆形轨迹,实时速度(0:31)。"></span>
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="slide__fig">
+                                            <div class="slide__media">
+                                                <video src="assets/projects%20photos/FilMBot_Video1.mp4#t=4" controls muted playsinline preload="metadata"></video>
+                                            </div>
+                                            <figcaption>
+                                                <strong data-en="Low-cost fabrication" data-zh="低成本制作"></strong>
+                                                <span data-en=" · From polypropylene film to a working robot (1:54)." data-zh=" · 从聚丙烯薄膜到完整的机器人(1:54)。"></span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
                                 </section>
 
                             </div>
@@ -618,8 +656,7 @@
                               data-zh="(全学院唯一获得者),2016。"></span>
                     </li>
                     <li>
-                        <strong data-en="Innovation and Entrepreneurship Excellence Star Scholarship" data-zh="创新创业卓越之星奖学金"></strong>
-                        <span data-en=", top 0.75% in the school, 2016." data-zh="(全学院前 0.75%),2016。"></span>
+                        <strong data-en="Innovation and Entrepreneurship Excellence Star Scholarship" data-zh="创新创业卓越之星奖学金"></strong><span data-en=", top 0.75% in the school, 2016." data-zh="(全学院前 0.75%),2016。"></span>
                     </li>
                     <li data-en="First-Class Academic Scholarship, 2016, 2017, 2019, 2020." data-zh="一等学业奖学金,2016、2017、2019、2020。"></li>
                     <li data-en="Science and Technology Innovation Scholarship, 2015, 2016, 2017." data-zh="科技创新奖学金,2015、2016、2017。"></li>
@@ -708,6 +745,6 @@
         <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
     </div>
 
-    <script src="script.js?v=14"></script>
+    <script src="script.js?v=15"></script>
 </body>
 </html>
