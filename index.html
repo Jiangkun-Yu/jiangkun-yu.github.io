@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -297,26 +297,75 @@
                         <h3 class="entry__title" data-en="FilMBot: High-Speed Soft Robotic Micromanipulator" data-zh="FilMBot 高速软体机器人微操纵器研究"></h3>
                         <span class="entry__date" data-en="Aalto University, 2022 – 2026" data-zh="阿尔托大学,2022 – 2026"></span>
                     </div>
-                    <p class="entry__role" data-en="Funded by the Research Council of Finland" data-zh="芬兰科学院资助项目"></p>
-                    <ul class="entry__list">
-                        <li>
-                            <strong data-en="Main implementer;" data-zh="项目主要实施人,"></strong>
-                            <span data-en=" contributed to the grant proposal and completed " data-zh="参与项目申请书撰写,并以第一作者完成了 "></span>
-                            <strong data-en="5 first-author papers (2 under review)" data-zh="5 篇研究论文(2 篇在投)"></strong>
-                            <span data-en=", including one in " data-zh=",包括在机器人领域顶刊 "></span>
-                            <strong data-en="IEEE Transactions on Robotics" data-zh="IEEE Transactions on Robotics"></strong><span data-en="." data-zh=" 上发表的论文。"></span>
-                        </li>
-                        <li data-en="Led end-to-end robotic system development: electromagnetic actuation, compliant mechanism design, electronics integration, embedded control, vision-based sensing and prototyping."
-                            data-zh="主导端到端机器人系统研发:电磁驱动、柔顺机构设计、电子集成、嵌入式控制、视觉感知与原型制作。"></li>
-                        <li data-en="Designed and optimized a high-speed precision platform achieving micrometer positioning precision and meter-per-second-level speeds with a centimeter-scale robot."
-                            data-zh="设计并优化高速精密机器人平台,以厘米尺度机器人实现微米级定位精度与米每秒级运动速度。"></li>
-                        <li data-en="Developed dynamic modelling and closed-loop control — system identification, hybrid controller and real-time trajectory tracking — enabling high-frequency motion control."
-                            data-zh="建立动力学模型并开发闭环控制算法,包括系统辨识、混合控制器与实时轨迹跟踪,实现高频运动控制。"></li>
-                        <li data-en="Integrated onboard vision-based position sensing (camera integration, image processing, real-time position estimation) for closed-loop robotic control."
-                            data-zh="集成机载视觉位置感知(相机集成、图像处理、实时位置估计),实现机器人闭环控制。"></li>
-                        <li data-en="Built and validated multiple prototypes using CAD, 3D printing, laser cutting and low-cost materials; developed an open-source, DIY-friendly version costing about one hundred euros."
-                            data-zh="利用 CAD、3D 打印、激光切割及低成本材料完成并验证多代原型;开发了成本约 100 欧元的开源 DIY 版本。"></li>
-                    </ul>
+
+                    <div class="project">
+                        <div class="project__text">
+                            <p class="entry__role" data-en="Funded by the Research Council of Finland" data-zh="芬兰科学院资助项目"></p>
+                            <ul class="entry__list">
+                                <li>
+                                    <strong data-en="Main implementer:" data-zh="项目主要实施人:"></strong>
+                                    <span data-en=" " data-zh="以第一作者完成 "></span>
+                                    <strong data-en="5 first-author papers" data-zh="5 篇研究论文"></strong>
+                                    <span data-en=" (2 under review), incl. " data-zh="(2 篇在投),包括 "></span>
+                                    <strong data-en="IEEE T-RO" data-zh="IEEE T-RO"></strong><span data-en="." data-zh=" 论文。"></span>
+                                </li>
+                                <li data-en="Centimeter-scale soft robot with meter-per-second speed and micrometer precision."
+                                    data-zh="厘米尺度软体机器人,实现米每秒级速度与微米级精度。"></li>
+                                <li data-en="End-to-end: actuation, compliant mechanism, embedded control, onboard vision."
+                                    data-zh="端到端研发:驱动、柔顺机构、嵌入式控制、机载视觉。"></li>
+                            </ul>
+
+                            <details class="more">
+                                <summary><span data-en="More details" data-zh="更多细节">More details</span></summary>
+                                <ul class="entry__list">
+                                    <li data-en="Contributed to the grant proposal; led the design, development and experimental research as the main implementer."
+                                        data-zh="参与项目申请书撰写;作为主要实施人主导软体微操纵器的设计、研发与实验研究。"></li>
+                                    <li data-en="Led end-to-end robotic system development: electromagnetic actuation, compliant mechanism design, electronics integration, embedded control, vision-based sensing and prototyping."
+                                        data-zh="主导端到端机器人系统研发:电磁驱动、柔顺机构设计、电子集成、嵌入式控制、视觉感知与原型制作。"></li>
+                                    <li data-en="Designed and optimized a high-speed precision platform achieving micrometer positioning precision and meter-per-second-level speeds with a centimeter-scale robot."
+                                        data-zh="设计并优化高速精密机器人平台,以厘米尺度机器人实现微米级定位精度与米每秒级运动速度。"></li>
+                                    <li data-en="Developed dynamic modelling and closed-loop control — system identification, hybrid controller and real-time trajectory tracking — enabling high-frequency motion control."
+                                        data-zh="建立动力学模型并开发闭环控制算法,包括系统辨识、混合控制器与实时轨迹跟踪,实现高频运动控制。"></li>
+                                    <li data-en="Integrated onboard vision-based position sensing (camera integration, image processing, real-time position estimation) for closed-loop robotic control."
+                                        data-zh="集成机载视觉位置感知(相机集成、图像处理、实时位置估计),实现机器人闭环控制。"></li>
+                                    <li data-en="Built and validated multiple prototypes using CAD, 3D printing, laser cutting and low-cost materials; developed an open-source, DIY-friendly version costing about one hundred euros."
+                                        data-zh="利用 CAD、3D 打印、激光切割及低成本材料完成并验证多代原型;开发了成本约 100 欧元的开源 DIY 版本。"></li>
+                                </ul>
+                            </details>
+                        </div>
+
+                        <!-- ===== Media: the first item is the cover; hover plays data-preview; click opens the gallery =====
+                             To add media to another project, copy this whole <div class="media"> block into that project. -->
+                        <div class="media">
+                            <button class="media__cover" type="button" data-open="0" data-preview="assets/projects%20photos/FilMBot_Video2.mp4" aria-label="Open FilMBot gallery">
+                                <img src="assets/projects%20photos/FilMBot_Cover.jpg" alt="FilMBot prototype" loading="lazy">
+                                <span class="media__badge"><span class="media__play">▶</span> <span data-en="2 videos · 2 photos" data-zh="2 个视频 · 2 张图片">2 videos · 2 photos</span></span>
+                                <span class="media__hint" data-en="Hover to preview · click to open" data-zh="悬停预览 · 点击查看">Hover to preview · click to open</span>
+                            </button>
+                            <div class="media__thumbs">
+                                <button type="button" class="thumb" data-type="image" data-src="assets/projects%20photos/FilMBot_Cover.jpg"
+                                        data-caption-en="FilMBot prototype — a centimeter-scale soft parallel robotic micromanipulator."
+                                        data-caption-zh="FilMBot 原型:厘米尺度的软体并联机器人微操纵器。">
+                                    <img src="assets/projects%20photos/FilMBot_Cover.jpg" alt="" loading="lazy">
+                                </button>
+                                <button type="button" class="thumb" data-type="image" data-src="assets/projects%20photos/FilMBot_Fig1.png"
+                                        data-caption-en="(A) Structure and components. (B) Film legs deforming under different actuation states."
+                                        data-caption-zh="(A) 结构与组成;(B) 不同驱动状态下薄膜腿的变形。">
+                                    <img src="assets/projects%20photos/FilMBot_Fig1.png" alt="" loading="lazy">
+                                </button>
+                                <button type="button" class="thumb thumb--video" data-type="video" data-src="assets/projects%20photos/FilMBot_Video2.mp4"
+                                        data-caption-en="Circular trajectories at 1 Hz and 10 Hz, shown in real time (0:31)."
+                                        data-caption-zh="1 Hz 与 10 Hz 圆形轨迹运动,实时速度(0:31)。">
+                                    <video src="assets/projects%20photos/FilMBot_Video2.mp4#t=12" muted playsinline preload="metadata"></video>
+                                </button>
+                                <button type="button" class="thumb thumb--video" data-type="video" data-src="assets/projects%20photos/FilMBot_Video1.mp4"
+                                        data-caption-en="Fabrication and assembly — from polypropylene film to a working robot (1:54)."
+                                        data-caption-zh="制作与装配:从聚丙烯薄膜到完整的机器人(1:54)。">
+                                    <video src="assets/projects%20photos/FilMBot_Video1.mp4#t=20" muted playsinline preload="metadata"></video>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <article class="entry">
@@ -625,6 +674,20 @@
 
     </div>
 
-    <script src="script.js?v=10"></script>
+    <!-- ============== LIGHTBOX (media viewer) ============== -->
+    <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Media viewer">
+        <button class="lightbox__close" type="button" aria-label="Close">×</button>
+        <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous">‹</button>
+        <figure class="lightbox__figure">
+            <div class="lightbox__stage"></div>
+            <figcaption class="lightbox__caption">
+                <span class="lightbox__count"></span>
+                <span class="lightbox__text"></span>
+            </figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
+    </div>
+
+    <script src="script.js?v=11"></script>
 </body>
 </html>
