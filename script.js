@@ -124,7 +124,8 @@
     });
 
     /* =========================================================
-       Project sliders — arrows, tabs, keyboard and swipe
+       Project sliders — arrows, page counter, keyboard and swipe
+       (all pages share the height of the tallest one via CSS)
        ========================================================= */
     document.querySelectorAll('.slider').forEach(slider => {
         const viewport = slider.querySelector('.slider__viewport');
@@ -132,35 +133,16 @@
         const slides   = Array.from(slider.querySelectorAll('.slide'));
         const prevBtn  = slider.querySelector('.slider__arrow--prev');
         const nextBtn  = slider.querySelector('.slider__arrow--next');
-        const tabsEl   = slider.querySelector('.slider__tabs');
-        const isZh     = () => bodyEl.classList.contains('lang-zh');
+        const countEl  = slider.querySelector('.slider__count');
         let index = 0;
-
-        // Build one tab per slide. data-en / data-zh let the language toggle relabel them.
-        const tabs = slides.map((s, k) => {
-            const t = document.createElement('button');
-            t.type = 'button';
-            t.className = 'slider__tab';
-            t.dataset.en = s.dataset.labelEn || String(k + 1);
-            t.dataset.zh = s.dataset.labelZh || t.dataset.en;
-            t.textContent = isZh() ? t.dataset.zh : t.dataset.en;
-            t.addEventListener('click', () => go(k));
-            tabsEl.appendChild(t);
-            return t;
-        });
-
-        function fitHeight() {
-            viewport.style.height = slides[index].offsetHeight + 'px';
-        }
 
         function go(k) {
             index = Math.max(0, Math.min(slides.length - 1, k));
             track.style.transform = 'translateX(' + (-index * 100) + '%)';
-            fitHeight();
-            tabs.forEach((t, i) => t.classList.toggle('is-active', i === index));
             prevBtn.disabled = index === 0;
             nextBtn.disabled = index === slides.length - 1;
             slider.classList.toggle('is-start', index === 0);
+            if (countEl) countEl.textContent = (index + 1) + ' / ' + slides.length;
             // pause any video that is no longer visible
             slides.forEach((s, i) => {
                 if (i !== index) s.querySelectorAll('video').forEach(v => v.pause());
@@ -185,18 +167,6 @@
             if (Math.abs(dx) > 50) go(index + (dx < 0 ? 1 : -1));
             startX = null;
         });
-
-        // keep the height right when images/videos load or the window resizes
-        if ('ResizeObserver' in window) {
-            const ro = new ResizeObserver(fitHeight);
-            slides.forEach(s => ro.observe(s));
-        } else {
-            window.addEventListener('resize', fitHeight);
-            slider.querySelectorAll('img, video').forEach(m => {
-                m.addEventListener('load', fitHeight);
-                m.addEventListener('loadedmetadata', fitHeight);
-            });
-        }
 
         go(0);
     });

@@ -694,16 +694,16 @@ body:not(.lang-zh) .zh-only {
     overflow: hidden;
     border-radius: 10px;
     background: var(--panel-2);
-    transition: height 0.35s ease;
 }
 
 .slider:focus-visible .slider__viewport {
     box-shadow: 0 0 0 2px var(--accent);
 }
 
+/* align-items: stretch makes every page as tall as the tallest one */
 .slider__track {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
@@ -711,33 +711,34 @@ body:not(.lang-zh) .zh-only {
     position: relative;
     flex: 0 0 100%;
     min-width: 0;
-    padding: 22px 50px 22px 30px;
+    padding: 26px 56px 26px 34px;
 }
 
-/* Overview slide: faded cover image on the right */
+/* Page 1: overview text + faded cover image showing the whole robot */
 .slide--intro {
-    min-height: 270px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
 }
 
 .slide__bg {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 34%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 62%;
-    opacity: 0.55;
-    mix-blend-mode: multiply;           /* white photo background melts into the panel colour */
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
-    mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+    top: 14px;
+    right: 44px;
+    width: 32%;
+    height: calc(100% - 28px);
+    object-fit: contain;
+    object-position: center;
+    opacity: 0.6;
+    mix-blend-mode: multiply;           /* the photo's white background melts into the panel colour */
+    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 52%, #000 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse 50% 50% at 50% 52%, #000 55%, transparent 100%);
     pointer-events: none;
 }
 
 .slide--intro .slide__body {
     position: relative;
-    max-width: 70%;
+    max-width: 68%;
 }
 
 .slide__hint {
@@ -753,12 +754,40 @@ body:not(.lang-zh) .zh-only {
     border-radius: 999px;
 }
 
-/* Media slides: picture/video + explanation side by side */
-.slide--media {
+/* Page 2: details text + figure */
+.slide--split {
     display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-    gap: 26px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 28px;
     align-items: center;
+}
+
+.slide--split .entry__list li {
+    font-size: 16.5px;
+    margin-bottom: 6px;
+}
+
+/* Page 3: videos side by side */
+.slide--videos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: center;
+}
+
+.slide__fig {
+    margin: 0;
+}
+
+.slide__fig figcaption {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink-mute);
+}
+
+.slide__fig figcaption strong {
+    color: var(--ink);
 }
 
 .slide__media {
@@ -782,7 +811,7 @@ button.slide__media {
 .slide__media video {
     display: block;
     width: 100%;
-    max-height: 360px;
+    max-height: 340px;
     object-fit: contain;
 }
 
@@ -810,19 +839,13 @@ button.slide__media:hover .slide__zoom {
     font-size: 19px;
     font-weight: 600;
     color: var(--ink);
-    margin-bottom: 8px;
-}
-
-.slide__text p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--ink-soft);
+    margin-bottom: 10px;
 }
 
 /* Arrows */
 .slider__arrow {
     position: absolute;
-    top: calc(50% - 40px);
+    top: calc(50% - 22px);
     z-index: 3;
     width: 44px;
     height: 44px;
@@ -850,7 +873,7 @@ button.slide__media:hover .slide__zoom {
     pointer-events: none;
 }
 
-/* the → arrow gently pulses on the first slide to invite a click */
+/* the → arrow gently pulses on the first page to invite a click */
 .slider.is-start .slider__arrow--next {
     animation: nudge 1.6s ease-in-out infinite;
 }
@@ -860,37 +883,19 @@ button.slide__media:hover .slide__zoom {
     50%      { box-shadow: 0 6px 16px rgba(20,30,45,0.35), 0 0 0 10px rgba(246,192,67,0); }
 }
 
-/* Tabs (page indicator) */
-.slider__tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 12px;
-}
-
-.slider__tab {
-    padding: 3px 13px;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
+/* small "1 / 3" page counter in the corner */
+.slider__count {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    z-index: 2;
+    padding: 1px 10px;
+    font-size: 13px;
+    font-weight: 600;
     color: var(--ink-mute);
-    background: transparent;
-    border: 1px solid var(--line-strong);
+    background: rgba(30, 42, 58, 0.45);
     border-radius: 999px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.slider__tab:hover {
-    color: var(--ink);
-    border-color: var(--accent);
-}
-
-.slider__tab.is-active {
-    color: var(--accent-ink);
-    background: var(--accent);
-    border-color: var(--accent);
+    pointer-events: none;
 }
 
 /* -------- Lightbox -------- */
@@ -1342,29 +1347,31 @@ ul.pub-list li::before,
     .lightbox__nav--next { right: 20px; }
 }
 
-/* project slider: media stacks above the text on narrower screens */
+/* project slider: stack columns on narrower screens */
 @media (max-width: 1100px) {
-    .slide--media {
+    .slide--split,
+    .slide--videos {
         grid-template-columns: 1fr;
     }
 
     .slide__bg {
-        width: 45%;
+        width: 40%;
     }
 }
 
 @media (max-width: 600px) {
-    .slider__viewport {
-        margin: 0 -6px;
+    .slide {
+        padding: 22px 18px;
     }
 
-    .slide {
-        padding: 18px 16px 16px;
+    .slide--intro .slide__body {
+        max-width: 100%;
     }
 
     .slide__bg {
-        opacity: 0.18;
-        width: 70%;
+        opacity: 0.2;
+        width: 60%;
+        right: 8px;
     }
 
     .slider__arrow {
@@ -1373,8 +1380,8 @@ ul.pub-list li::before,
         font-size: 24px;
     }
 
-    .slider__arrow--prev { left: -10px; }
-    .slider__arrow--next { right: -10px; }
+    .slider__arrow--prev { left: -12px; }
+    .slider__arrow--next { right: -12px; }
 }
 
 /* -------- Fade-in animation on load -------- */

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
@@ -298,14 +298,14 @@
                         <span class="entry__date" data-en="Aalto University, 2022 – 2026" data-zh="阿尔托大学,2022 – 2026"></span>
                     </div>
 
-                    <!-- ===== Project slider: each <section class="slide"> is one page; tab labels come from data-label-en / data-label-zh.
+                    <!-- ===== Project slider: each <section class="slide"> is one page (all pages get the height of the tallest one).
                          To give another project a slider, copy this <div class="slider"> block and edit the slides. ===== -->
                     <div class="slider" tabindex="0" aria-roledescription="carousel">
                         <div class="slider__viewport">
                             <div class="slider__track">
 
                                 <!-- 1. Overview -->
-                                <section class="slide slide--intro" data-label-en="Overview" data-label-zh="概览">
+                                <section class="slide slide--intro">
                                     <img class="slide__bg" src="assets/projects%20photos/FilMBot_Cover.jpg" alt="" aria-hidden="true">
                                     <div class="slide__body">
                                         <p class="entry__role" data-en="Funded by the Research Council of Finland" data-zh="芬兰科学院资助项目"></p>
@@ -328,61 +328,55 @@
                                     </div>
                                 </section>
 
-                                <!-- 2. Details -->
-                                <section class="slide" data-label-en="Details" data-label-zh="细节">
-                                    <div class="slide__body">
+                                <!-- 2. Details + design figure -->
+                                <section class="slide slide--split">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Details" data-zh="项目细节"></h4>
                                         <ul class="entry__list">
-                                            <li data-en="Contributed to the grant proposal; led design, development and experimental research as the main implementer."
-                                                data-zh="参与项目申请书撰写;作为主要实施人主导软体微操纵器的设计、研发与实验研究。"></li>
-                                            <li data-en="End-to-end system development: electromagnetic actuation, compliant mechanism design, electronics integration, embedded control, vision-based sensing and prototyping."
-                                                data-zh="端到端系统研发:电磁驱动、柔顺机构设计、电子集成、嵌入式控制、视觉感知与原型制作。"></li>
-                                            <li data-en="High-speed precision platform: micrometer positioning precision and meter-per-second-level speeds with a centimeter-scale robot."
-                                                data-zh="高速精密平台:以厘米尺度机器人实现微米级定位精度与米每秒级运动速度。"></li>
-                                            <li data-en="Dynamic modelling and closed-loop control — system identification, hybrid controller and real-time trajectory tracking at high frequency."
-                                                data-zh="动力学建模与闭环控制:系统辨识、混合控制器与实时高频轨迹跟踪。"></li>
-                                            <li data-en="Onboard vision-based position sensing: camera integration, image processing and real-time position estimation for closed-loop control."
-                                                data-zh="机载视觉位置感知:相机集成、图像处理与实时位置估计,实现闭环控制。"></li>
-                                            <li data-en="Multiple prototypes built with CAD, 3D printing, laser cutting and low-cost materials, including an open-source, DIY-friendly version costing about 100 euros."
-                                                data-zh="利用 CAD、3D 打印、激光切割及低成本材料完成多代原型,包括成本约 100 欧元的开源 DIY 版本。"></li>
+                                            <li data-en="Contributed to the grant proposal; as main implementer, led design, development and experiments."
+                                                data-zh="参与项目申请书撰写;作为主要实施人主导设计、研发与实验研究。"></li>
+                                            <li data-en="Electromagnetic actuation, compliant mechanism design, electronics integration and embedded control."
+                                                data-zh="电磁驱动、柔顺机构设计、电子集成与嵌入式控制。"></li>
+                                            <li data-en="Micrometer positioning precision and meter-per-second-level speed with a centimeter-scale robot."
+                                                data-zh="以厘米尺度机器人实现微米级定位精度与米每秒级运动速度。"></li>
+                                            <li data-en="Dynamic modelling, system identification, hybrid control and high-frequency trajectory tracking."
+                                                data-zh="动力学建模、系统辨识、混合控制与高频轨迹跟踪。"></li>
+                                            <li data-en="Onboard vision: camera integration, image processing and real-time position estimation."
+                                                data-zh="机载视觉:相机集成、图像处理与实时位置估计。"></li>
+                                            <li data-en="Prototyping with CAD, 3D printing and laser cutting; open-source DIY version for about 100 euros."
+                                                data-zh="利用 CAD、3D 打印、激光切割完成原型;开源 DIY 版本成本约 100 欧元。"></li>
                                         </ul>
                                     </div>
+                                    <figure class="slide__fig">
+                                        <button class="slide__media" type="button" data-zoom="assets/projects%20photos/FilMBot_Fig1.png" aria-label="Enlarge figure">
+                                            <img src="assets/projects%20photos/FilMBot_Fig1.png" alt="FilMBot structure and film-leg deformation" loading="lazy">
+                                            <span class="slide__zoom">⤢</span>
+                                        </button>
+                                        <figcaption data-en="(A) Structure: coils actuate magnets on polypropylene film legs, which bend as compliant joints. (B) Leg deformation."
+                                                    data-zh="(A) 结构:线圈驱动聚丙烯薄膜腿上的磁铁,薄膜腿作为柔顺关节弯曲;(B) 薄膜腿变形。"></figcaption>
+                                    </figure>
                                 </section>
 
-                                <!-- 3. Design (figure) -->
-                                <section class="slide slide--media" data-label-en="Design" data-label-zh="结构">
-                                    <button class="slide__media" type="button" data-zoom="assets/projects%20photos/FilMBot_Fig1.png" aria-label="Enlarge figure">
-                                        <img src="assets/projects%20photos/FilMBot_Fig1.png" alt="FilMBot structure and film-leg deformation" loading="lazy">
-                                        <span class="slide__zoom">⤢</span>
-                                    </button>
-                                    <div class="slide__text">
-                                        <h4 class="slide__title" data-en="Soft parallel mechanism" data-zh="软体并联机构"></h4>
-                                        <p data-en="Electromagnetic coils actuate magnets mounted on thin polypropylene film legs. The film legs bend as compliant joints and move the needle end-effector, with no rigid hinges or bearings (A: components, B: leg deformation)."
-                                           data-zh="电磁线圈驱动安装在聚丙烯薄膜腿上的磁铁,薄膜腿作为柔顺关节弯曲变形,带动针尖末端执行器运动,无需刚性铰链或轴承(A:结构组成;B:薄膜腿变形)。"></p>
-                                    </div>
-                                </section>
-
-                                <!-- 4. Motion (video) -->
-                                <section class="slide slide--media" data-label-en="Motion" data-label-zh="运动">
-                                    <div class="slide__media">
-                                        <video src="assets/projects%20photos/FilMBot_Video2.mp4#t=3" controls muted playsinline preload="metadata"></video>
-                                    </div>
-                                    <div class="slide__text">
-                                        <h4 class="slide__title" data-en="High-frequency trajectories" data-zh="高频轨迹运动"></h4>
-                                        <p data-en="The end-effector traces circular trajectories at 1 Hz and 10 Hz, shown in real time, illustrating the high-speed, high-frequency motion of the soft robot (0:31)."
-                                           data-zh="末端执行器以 1 Hz 和 10 Hz 完成圆形轨迹运动(实时速度),展示软体机器人的高速、高频运动能力(0:31)。"></p>
-                                    </div>
-                                </section>
-
-                                <!-- 5. Fabrication (video) -->
-                                <section class="slide slide--media" data-label-en="Fabrication" data-label-zh="制作">
-                                    <div class="slide__media">
-                                        <video src="assets/projects%20photos/FilMBot_Video1.mp4#t=4" controls muted playsinline preload="metadata"></video>
-                                    </div>
-                                    <div class="slide__text">
-                                        <h4 class="slide__title" data-en="Low-cost fabrication" data-zh="低成本制作"></h4>
-                                        <p data-en="Step-by-step fabrication and assembly, from polypropylene film to a working robot, supporting a DIY-friendly version that costs about 100 euros (1:54)."
-                                           data-zh="逐步展示制作与装配过程:从聚丙烯薄膜到完整的机器人,支持成本约 100 欧元的 DIY 版本(1:54)。"></p>
-                                    </div>
+                                <!-- 3. Videos -->
+                                <section class="slide slide--videos">
+                                    <figure class="slide__fig">
+                                        <div class="slide__media">
+                                            <video src="assets/projects%20photos/FilMBot_Video2.mp4#t=3" controls muted playsinline preload="metadata"></video>
+                                        </div>
+                                        <figcaption>
+                                            <strong data-en="High-frequency motion" data-zh="高频运动"></strong>
+                                            <span data-en=" · Circular trajectories at 1 Hz and 10 Hz, real time (0:31)." data-zh=" · 1 Hz 与 10 Hz 圆形轨迹,实时速度(0:31)。"></span>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="slide__fig">
+                                        <div class="slide__media">
+                                            <video src="assets/projects%20photos/FilMBot_Video1.mp4#t=4" controls muted playsinline preload="metadata"></video>
+                                        </div>
+                                        <figcaption>
+                                            <strong data-en="Low-cost fabrication" data-zh="低成本制作"></strong>
+                                            <span data-en=" · From polypropylene film to a working robot (1:54)." data-zh=" · 从聚丙烯薄膜到完整的机器人(1:54)。"></span>
+                                        </figcaption>
+                                    </figure>
                                 </section>
 
                             </div>
@@ -390,7 +384,7 @@
 
                         <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Previous">‹</button>
                         <button class="slider__arrow slider__arrow--next" type="button" aria-label="Next">›</button>
-                        <div class="slider__tabs"></div>
+                        <span class="slider__count" aria-live="polite"></span>
                     </div>
                 </article>
 
@@ -714,6 +708,6 @@
         <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
     </div>
 
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=14"></script>
 </body>
 </html>
