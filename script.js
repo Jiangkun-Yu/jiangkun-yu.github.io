@@ -143,11 +143,34 @@
             nextBtn.disabled = index === slides.length - 1;
             slider.classList.toggle('is-start', index === 0);
             if (countEl) countEl.textContent = (index + 1) + ' / ' + slides.length;
-            // pause any video that is no longer visible
+            // autoplay videos on the visible page, pause the others
             slides.forEach((s, i) => {
-                if (i !== index) s.querySelectorAll('video').forEach(v => v.pause());
+                s.querySelectorAll('video').forEach(v => {
+                    if (i === index) {
+                        v.muted = true;
+                        const p = v.play();
+                        if (p && p.catch) p.catch(() => {});
+                    } else {
+                        v.pause();
+                    }
+                });
             });
         }
+
+        // videos: optional speed (data-rate="2") and loop back to the start time given by "#t=N" in the src
+        slider.querySelectorAll('video').forEach(v => {
+            const rate  = parseFloat(v.dataset.rate) || 1;
+            const m     = (v.getAttribute('src') || '').match(/#t=([\d.]+)/);
+            const start = m ? parseFloat(m[1]) : 0;
+            const applyRate = () => { v.playbackRate = rate; };
+            v.addEventListener('loadedmetadata', applyRate);
+            v.addEventListener('play', applyRate);
+            v.addEventListener('ended', () => {
+                v.currentTime = start;
+                const p = v.play();
+                if (p && p.catch) p.catch(() => {});
+            });
+        });
 
         prevBtn.addEventListener('click', () => go(index - 1));
         nextBtn.addEventListener('click', () => go(index + 1));
