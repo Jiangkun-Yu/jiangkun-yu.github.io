@@ -911,6 +911,81 @@ button.slide__media:hover .slide__zoom {
     margin-bottom: 10px;
 }
 
+/* Two related projects in one slider: project cards + small photos */
+.slide--projects {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 22px;
+    align-items: center;
+}
+
+.proj-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.proj {
+    padding: 14px 16px 6px;
+    background: rgba(30, 42, 58, 0.35);
+    border-top: 3px solid var(--accent);
+    border-radius: 8px;
+}
+
+.proj__tag {
+    display: inline-block;
+    padding: 1px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-ink);
+    background: var(--accent);
+    border-radius: 999px;
+}
+
+.proj__title {
+    margin: 8px 0 2px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+.proj__meta {
+    font-size: 14px;
+    color: var(--ink-mute);
+}
+
+.proj .entry__list li {
+    font-size: 15.5px;
+    margin-bottom: 6px;
+}
+
+.proj-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.proj-photos .slide__media img {
+    max-height: 170px;
+    object-fit: cover;
+}
+
+.proj-photos__cap {
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--ink-mute);
+}
+
+/* split slide whose media is a wide video: give the video the larger column */
+.slide--split.slide--wide-media {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+}
+
+.slide--wide-media .slide__media video {
+    max-height: 380px;
+}
+
 /* Arrows */
 .slider__arrow {
     position: absolute;
@@ -1420,8 +1495,20 @@ ul.pub-list li::before,
 @media (max-width: 1100px) {
     .slide--split,
     .slide--split:has(.slide__fig),
+    .slide--split.slide--wide-media,
+    .slide--projects,
     .slide__videos {
         grid-template-columns: 1fr;
+    }
+
+    /* the two lab photos sit side by side under the project cards */
+    .proj-photos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .proj-photos__cap {
+        grid-column: 1 / -1;
     }
 
     .slide--intro .slide__body {
@@ -1430,6 +1517,10 @@ ul.pub-list li::before,
 }
 
 @media (max-width: 600px) {
+    .proj-pair {
+        grid-template-columns: 1fr;
+    }
+
     .slide {
         padding: 22px 18px;
     }

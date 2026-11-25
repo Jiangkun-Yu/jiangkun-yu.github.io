@@ -426,28 +426,94 @@
                     </div>
                 </article>
 
+                <!-- Two related CMG projects shown in one entry (shared photos/video) -->
                 <article class="entry">
                     <div class="entry__head">
-                        <h3 class="entry__title" data-en="Magnetically Suspended Control Moment Gyro (MSCMG) Development" data-zh="国家重点研发项目:磁悬浮控制力矩陀螺研发"></h3>
+                        <h3 class="entry__title" data-en="Control Moment Gyro (CMG) Development: Two Projects" data-zh="磁悬浮控制力矩陀螺研发(两个项目)"></h3>
                         <span class="entry__date" data-en="Beihang University, 2019 – 2020" data-zh="北京航空航天大学,2019 – 2020"></span>
                     </div>
-                    <ul class="entry__list">
-                        <li data-en="Developed anti-disturbance angular-rate control for a low-speed precision motor servo system, including observer-based and sliding-mode control."
-                            data-zh="在导师指导下深度参与,开发了超低速伺服系统的高精度抗扰动角速率控制算法,包括基于观测器的控制与滑模控制。"></li>
-                        <li data-en="Implemented control software and hardware on DSP-based platforms; supported integration, tuning, debugging and experimental verification. Resulted in an IEEE journal paper and granted patents."
-                            data-zh="完成基于 DSP 的嵌入式系统软硬件实现,参与系统集成、调试与实验验证;以学生一作发表 1 篇 IEEE 期刊论文并获授权专利。"></li>
-                    </ul>
-                </article>
 
-                <article class="entry">
-                    <div class="entry__head">
-                        <h3 class="entry__title" data-en="Control Moment Gyro Development in a Civil Aerospace Pre-Research Project" data-zh="民用航天预研项目:磁悬浮控制力矩陀螺研发"></h3>
-                        <span class="entry__date" data-en="Beihang University, 2020" data-zh="北京航空航天大学,2020"></span>
+                    <div class="slider" tabindex="0" aria-roledescription="carousel">
+                        <div class="slider__viewport">
+                            <div class="slider__track">
+
+                                <!-- 1. The two projects side by side + small lab photos -->
+                                <section class="slide slide--projects">
+                                    <div class="proj-pair">
+                                        <div class="proj">
+                                            <span class="proj__tag" data-en="Project 1 · 2019 – 2020" data-zh="项目 1 · 2019 – 2020"></span>
+                                            <h4 class="proj__title" data-en="Magnetically Suspended Control Moment Gyro (MSCMG) Development" data-zh="国家重点研发项目:磁悬浮控制力矩陀螺研发"></h4>
+                                            <p class="proj__meta" data-en="National Key R&amp;D Program of China" data-zh="国家重点研发计划"></p>
+                                            <ul class="entry__list">
+                                                <li data-en="Anti-disturbance angular-rate control for a low-speed precision gimbal servo: observer-based and sliding-mode control."
+                                                    data-zh="在导师指导下深度参与,开发超低速框架伺服系统的高精度抗扰动角速率控制算法,包括基于观测器的控制与滑模控制。"></li>
+                                                <li data-en="DSP-based software and hardware; integration, tuning and experimental verification. Resulted in an IEEE journal paper and granted patents."
+                                                    data-zh="完成基于 DSP 的软硬件实现,参与系统集成、调试与实验验证;以学生一作发表 1 篇 IEEE 期刊论文并获授权专利。"></li>
+                                            </ul>
+                                        </div>
+                                        <div class="proj">
+                                            <span class="proj__tag" data-en="Project 2 · 2020" data-zh="项目 2 · 2020"></span>
+                                            <h4 class="proj__title" data-en="Control Moment Gyro Development in a Civil Aerospace Pre-Research Project" data-zh="民用航天预研项目:磁悬浮控制力矩陀螺研发"></h4>
+                                            <p class="proj__meta" data-en="Civil Aerospace Pre-Research Program" data-zh="民用航天预先研究项目"></p>
+                                            <ul class="entry__list">
+                                                <li data-en="DSP- and FPGA-based circuit design for the CMG drive and control electronics."
+                                                    data-zh="在导师指导下深度参与,完成基于 DSP 与 FPGA 的驱动与控制电路设计。"></li>
+                                                <li data-en="Anti-disturbance control algorithms, embedded programming and system debugging."
+                                                    data-zh="开发抗扰动控制算法,完成嵌入式程序开发与系统调试。"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="proj-photos">
+                                        <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Gyro_practice_web.jpg" aria-label="Enlarge photo">
+                                            <img src="assets/projects%20photos/Gyro_practice_web.jpg" alt="Wiring the CMG gimbal test rig" loading="lazy">
+                                            <span class="slide__zoom">⤢</span>
+                                        </button>
+                                        <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Gyro_practice2_web.jpg" aria-label="Enlarge photo">
+                                            <img src="assets/projects%20photos/Gyro_practice2_web.jpg" alt="Debugging the control electronics in the lab" loading="lazy">
+                                            <span class="slide__zoom">⤢</span>
+                                        </button>
+                                        <p class="proj-photos__cap" data-en="Hands-on integration and debugging in the lab (both projects)." data-zh="实验室中的系统集成与调试(两个项目)。"></p>
+                                    </div>
+                                </section>
+
+                                <!-- 2. Shared technical result + video -->
+                                <section class="slide slide--split slide--wide-media">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Shared core: precise gimbal-rate control" data-zh="共同核心:高精度框架角速率控制"></h4>
+                                        <ul class="entry__list">
+                                            <li>
+                                                <strong class="hl" data-en="Problem" data-zh="问题"></strong>
+                                                <span data-en=" · Nonlinear disturbances from the servo motor and " data-zh=" · 伺服电机与"></span>
+                                                <strong data-en="harmonic drive" data-zh="谐波减速器"></strong><span data-en=" degrade low-speed gimbal rate." data-zh="引入的非线性扰动降低低速框架角速率精度。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Method" data-zh="方法"></strong>
+                                                <span data-en=" · A " data-zh=" · 提出"></span>
+                                                <strong data-en="reduced-order cascaded extended state observer (RCESO)" data-zh="降阶级联扩张状态观测器(RCESO)"></strong><span data-en=" to estimate and reject them." data-zh=",估计并抑制扰动。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Result" data-zh="结果"></strong>
+                                                <span data-en=" · Rate fluctuation cut from " data-zh=" · 角速率波动从 "></span>
+                                                <strong data-en="0.52°/s to 0.18°/s (over 60%)" data-zh="0.52°/s 降至 0.18°/s(降低 60% 以上)"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <figure class="slide__fig">
+                                        <div class="slide__media">
+                                            <video src="assets/projects%20photos/Gyro_Video1.mp4" controls muted playsinline preload="metadata"></video>
+                                        </div>
+                                        <figcaption data-en="Single-gimbal MSCMG and the disturbance-rejection result."
+                                                    data-zh="单框架磁悬浮控制力矩陀螺及扰动抑制效果。"></figcaption>
+                                    </figure>
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Previous">‹</button>
+                        <button class="slider__arrow slider__arrow--next" type="button" aria-label="Next">›</button>
+                        <span class="slider__count" aria-live="polite"></span>
                     </div>
-                    <ul class="entry__list">
-                        <li data-en="Implemented DSP- and FPGA-based circuit design; developed control algorithms, programming and system debugging."
-                            data-zh="在导师指导下深度参与,完成基于 DSP 与 FPGA 的电路设计、抗扰动控制算法、程序开发与系统调试。"></li>
-                    </ul>
                 </article>
 
                 <article class="entry">
