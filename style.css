@@ -730,9 +730,9 @@ body:not(.lang-zh) .zh-only {
     max-width: 42%;
     object-fit: contain;
     object-position: center top;
-    opacity: 0.85;
-    -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
+    filter: drop-shadow(0 10px 24px rgba(10, 18, 30, 0.45));
+    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
     pointer-events: none;
 }
 
@@ -837,6 +837,15 @@ body:not(.lang-zh) .zh-only {
 
 .slide__fig {
     margin: 0;
+}
+
+/* split slide with a figure: give the figure more room */
+.slide--split:has(.slide__fig) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+}
+
+.slide__fig .slide__media img {
+    max-height: 460px;
 }
 
 .slide__fig figcaption {
@@ -1410,6 +1419,7 @@ ul.pub-list li::before,
 /* project slider: stack columns on narrower screens */
 @media (max-width: 1100px) {
     .slide--split,
+    .slide--split:has(.slide__fig),
     .slide__videos {
         grid-template-columns: 1fr;
     }
