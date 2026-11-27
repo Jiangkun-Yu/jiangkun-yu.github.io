@@ -849,6 +849,30 @@ body:not(.lang-zh) .zh-only {
     object-position: center;
 }
 
+/* three photos: landscape + portrait + certificate */
+.slide__photos--3 {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.95fr) minmax(0, 0.75fr);
+}
+
+.slide__photos--3 .slide__media img {
+    height: 240px;
+}
+
+.slide__photos--3 .slide__media:last-child img {
+    object-fit: contain;
+    background: #fff;
+}
+
+/* small photo under the text column */
+.slide__media--small {
+    margin-top: 14px;
+}
+
+.slide__media--small img {
+    max-height: 160px;
+    object-fit: cover;
+}
+
 /* source / copyright note for third-party media */
 .slide__credit {
     display: inline-block;

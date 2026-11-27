@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=18">
+    <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 
@@ -521,14 +521,89 @@
                         <h3 class="entry__title" data-en="Non-Invasive Hemoglobin Detection Device Development" data-zh="大学生校企合作项目:便携式无创血红蛋白检测"></h3>
                         <span class="entry__date" data-en="China University of Petroleum (East China), 2016 – 2017" data-zh="中国石油大学(华东),2016 – 2017"></span>
                     </div>
-                    <ul class="entry__list">
-                        <li>
-                            <strong data-en="Team leader" data-zh="学生团队负责人,"></strong>
-                            <span data-en=" of a university–enterprise cooperation project. Implemented circuit / mechanical design, programming, embedded design and signal processing. "
-                                  data-zh="开发了原型样机并获得一项专利授权;完成系统架构、电路与机械设计、程序开发、嵌入式系统与信号处理等。"></span>
-                            <strong data-en="Successfully developed a prototype, resulting in a granted patent." data-zh=""></strong>
-                        </li>
-                    </ul>
+                    <div class="slider" tabindex="0" aria-roledescription="carousel">
+                        <div class="slider__viewport">
+                            <div class="slider__track">
+
+                                <!-- 1. Overview + device / PCB photos -->
+                                <section class="slide slide--split">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Prototype & hardware" data-zh="样机与硬件"></h4>
+                                        <ul class="entry__list">
+                                            <li>
+                                                <strong class="hl" data-en="Role" data-zh="角色"></strong>
+                                                <span data-en=" · " data-zh=" · "></span>
+                                                <strong data-en="Team leader" data-zh="学生团队负责人"></strong>
+                                                <span data-en=" of a university–enterprise cooperation project." data-zh=",校企合作项目。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Work" data-zh="工作"></strong>
+                                                <span data-en=" · Circuit and mechanical design, programming, embedded design and signal processing."
+                                                      data-zh=" · 完成系统架构、电路与机械设计、程序开发、嵌入式系统与信号处理等。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Result" data-zh="成果"></strong>
+                                                <span data-en=" · " data-zh=" · "></span>
+                                                <strong data-en="Working prototype and a granted patent" data-zh="开发了原型样机并获得一项专利授权"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                        </ul>
+                                        <p class="slide__hint">
+                                            <span data-en="Click → to see the device in action" data-zh="点击 → 观看样机演示">Click → to see the device in action</span>
+                                        </p>
+                                    </div>
+                                    <figure class="slide__fig">
+                                        <div class="slide__photos">
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo3_web.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/Hemoglobin_photo3_web.jpg" alt="Hemoglobin detection prototype with touch screen and finger sensor" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo4_PCB_web.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/Hemoglobin_photo4_PCB_web.jpg" alt="Custom control PCB of the hemoglobin detector" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                        </div>
+                                        <figcaption data-en="The prototype with its touch screen and finger sensor, and the custom control PCB I designed."
+                                                    data-zh="带触摸屏与指夹传感器的样机,以及自主设计的控制电路板。"></figcaption>
+                                    </figure>
+                                </section>
+
+                                <!-- 2. Demo video + measurement photo -->
+                                <section class="slide slide--split slide--wide-media">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Device in action" data-zh="样机演示"></h4>
+                                        <ul class="entry__list">
+                                            <li>
+                                                <strong class="hl" data-en="Measure" data-zh="测量"></strong>
+                                                <span data-en=" · Just place a finger in the sensor clip, " data-zh=" · 只需将手指放入指夹传感器,"></span>
+                                                <strong data-en="no blood sample needed" data-zh="无需采血"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Check" data-zh="验证"></strong>
+                                                <span data-en=" · The reading is compared with a " data-zh=" · 测量结果与"></span>
+                                                <strong data-en="hospital blood test" data-zh="医院血常规检测"></strong><span data-en="." data-zh="进行对比。"></span>
+                                            </li>
+                                        </ul>
+                                        <button class="slide__media slide__media--small" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo2.jpg" aria-label="Enlarge photo">
+                                            <img src="assets/projects%20photos/Hemoglobin_photo2.jpg" alt="Measuring hemoglobin at the fingertip" loading="lazy">
+                                            <span class="slide__zoom">⤢</span>
+                                        </button>
+                                    </div>
+                                    <figure class="slide__fig">
+                                        <div class="slide__media">
+                                            <video src="assets/projects%20photos/Hemoglobin_video1_web.mp4" controls muted playsinline preload="metadata"></video>
+                                        </div>
+                                        <figcaption data-en="Prototype demo with subtitles: a fingertip measurement, then a check against a blood test."
+                                                    data-zh="样机演示(带字幕):指尖测量,并与血常规结果对比。"></figcaption>
+                                    </figure>
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Previous">‹</button>
+                        <button class="slider__arrow slider__arrow--next" type="button" aria-label="Next">›</button>
+                        <span class="slider__count" aria-live="polite"></span>
+                    </div>
                 </article>
 
                 <article class="entry">
@@ -581,7 +656,7 @@
                                         </p>
                                     </div>
                                     <figure class="slide__fig">
-                                        <div class="slide__photos">
+                                        <div class="slide__photos slide__photos--3">
                                             <button class="slide__media" type="button" data-zoom="assets/projects%20photos/RoboMaster2017_photo1.jpg" aria-label="Enlarge photo">
                                                 <img src="assets/projects%20photos/RoboMaster2017_photo1.jpg" alt="Our RoboMaster 2017 team with the robots" loading="lazy">
                                                 <span class="slide__zoom">⤢</span>
@@ -590,9 +665,13 @@
                                                 <img src="assets/projects%20photos/RoboMaster2017_photo2_web.jpg" alt="Debugging our robot at the RoboMaster 2017 arena" loading="lazy">
                                                 <span class="slide__zoom">⤢</span>
                                             </button>
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Robmaster2017_certificate_web.jpg" aria-label="Enlarge certificate">
+                                                <img src="assets/projects%20photos/Robmaster2017_certificate_web.jpg" alt="RoboMaster 2017 National First Prize certificate" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
                                         </div>
-                                        <figcaption data-en="Our team with the robots, and debugging on site at RoboMaster 2017."
-                                                    data-zh="我们的团队与参赛机器人,以及 RoboMaster 2017 赛场调试。"></figcaption>
+                                        <figcaption data-en="Our team with the robots, on-site debugging, and the National First Prize certificate."
+                                                    data-zh="我们的团队与参赛机器人、赛场调试,以及全国一等奖证书。"></figcaption>
                                     </figure>
                                 </section>
 
@@ -887,6 +966,6 @@
         <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
     </div>
 
-    <script src="script.js?v=18"></script>
+    <script src="script.js?v=19"></script>
 </body>
 </html>
