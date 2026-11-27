@@ -897,6 +897,18 @@ body:not(.lang-zh) .zh-only {
     padding: 8px;
 }
 
+/* small object photographed on a plain background: show it whole and smaller */
+.photo-stack__row .slide__media--object img {
+    object-fit: contain;
+    padding: 18px;
+    background: #eceff3;
+}
+
+/* split slide with a narrow (portrait-style) video: give the text the larger column */
+.slide--split.slide--narrow-media:has(.slide__fig) {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+}
+
 /* row of three small photos */
 .photo-stack__row.photo-stack__row--3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1626,6 +1638,7 @@ ul.pub-list li::before,
     .slide--split,
     .slide--split:has(.slide__fig),
     .slide--split.slide--wide-media,
+    .slide--split.slide--narrow-media:has(.slide__fig),
     .slide--projects,
     .slide__videos {
         grid-template-columns: 1fr;
