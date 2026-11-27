@@ -886,6 +886,22 @@ body:not(.lang-zh) .zh-only {
     object-position: center;
 }
 
+/* two equal-width photos; a line drawing is shown whole on white */
+.slide__photos--even {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.slide__media--drawing img {
+    object-fit: contain !important;
+    background: #fff;
+    padding: 8px;
+}
+
+/* row of three small photos */
+.photo-stack__row.photo-stack__row--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 /* three photos: landscape + portrait + certificate */
 .slide__photos--3 {
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.95fr) minmax(0, 0.75fr);

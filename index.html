@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=22">
+    <link rel="stylesheet" href="style.css?v=23">
 </head>
 <body>
 
@@ -613,14 +613,100 @@
                         <h3 class="entry__title" data-en="Intelligent Voice Recognition Humanoid Robot Assistant" data-zh="国家级大学生创新训练项目:智能语音识别机器人"></h3>
                         <span class="entry__date" data-en="China University of Petroleum (East China), 2015 – 2017" data-zh="中国石油大学(华东),2015 – 2017"></span>
                     </div>
-                    <ul class="entry__list">
-                        <li>
-                            <strong data-en="Team leader" data-zh="学生团队负责人,"></strong>
-                            <span data-en=" of this undergraduate innovation training program. Implemented system architecture, embedded systems, sensors, control and programming. Built a prototype and received an "
-                                  data-zh="完成系统架构、嵌入式系统设计与程序开发,成功研发原型样机,获 "></span>
-                            <strong data-en="Outstanding Award" data-zh="优秀结题奖"></strong><span data-en="." data-zh="。"></span>
-                        </li>
-                    </ul>
+                    <div class="slider" tabindex="0" aria-roledescription="carousel">
+                        <div class="slider__viewport">
+                            <div class="slider__track">
+
+                                <!-- 1. Overview + robot photo and CAD drawing -->
+                                <section class="slide slide--split">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Design & prototype" data-zh="设计与样机"></h4>
+                                        <ul class="entry__list">
+                                            <li>
+                                                <strong class="hl" data-en="Role" data-zh="角色"></strong>
+                                                <span data-en=" · " data-zh=" · "></span>
+                                                <strong data-en="Team leader" data-zh="学生团队负责人"></strong>
+                                                <span data-en=" of this national undergraduate innovation training program." data-zh=",国家级大学生创新训练项目。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Work" data-zh="工作"></strong>
+                                                <span data-en=" · System architecture, embedded systems, sensors, control and programming."
+                                                      data-zh=" · 完成系统架构、嵌入式系统设计、传感器、控制与程序开发。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Result" data-zh="成果"></strong>
+                                                <span data-en=" · Built a working prototype and received an " data-zh=" · 成功研发原型样机,获 "></span>
+                                                <strong data-en="Outstanding Award" data-zh="优秀结题奖"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                        </ul>
+                                        <p class="slide__hint">
+                                            <span data-en="Click → to see the robot in action" data-zh="点击 → 观看机器人演示">Click → to see the robot in action</span>
+                                        </p>
+                                    </div>
+                                    <figure class="slide__fig">
+                                        <div class="slide__photos slide__photos--even">
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Humanoid_photo1_web.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/Humanoid_photo1_web.jpg" alt="The humanoid robot prototype" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                            <button class="slide__media slide__media--drawing" type="button" data-zoom="assets/projects%20photos/Humanoid_photo2.png" aria-label="Enlarge drawing">
+                                                <img src="assets/projects%20photos/Humanoid_photo2.png" alt="CAD drawing of the humanoid robot" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                        </div>
+                                        <figcaption data-en="The finished robot and its CAD design."
+                                                    data-zh="机器人样机及其 CAD 设计图。"></figcaption>
+                                    </figure>
+                                </section>
+
+                                <!-- 2. Demo video + detail photos -->
+                                <section class="slide slide--split">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Robot in action" data-zh="机器人演示"></h4>
+                                        <ul class="entry__list">
+                                            <li>
+                                                <strong class="hl" data-en="Voice" data-zh="语音"></strong>
+                                                <span data-en=" · Spoken commands make it " data-zh=" · 通过语音指令控制机器人"></span>
+                                                <strong data-en="walk, squat, do push-ups and play music" data-zh="行走、蹲下、做俯卧撑和播放音乐"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Hardware" data-zh="硬件"></strong>
+                                                <span data-en=" · Camera head, servo-driven hand and a Bluetooth voice-control box."
+                                                      data-zh=" · 摄像头头部、舵机驱动的机械手,以及蓝牙语音控制盒。"></span>
+                                            </li>
+                                        </ul>
+                                        <div class="photo-stack__row photo-stack__row--3">
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Humanoid_photo2_web.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/Humanoid_photo2_web.jpg" alt="Camera in the robot head" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Humanoid_photo3_web.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/Humanoid_photo3_web.jpg" alt="Servo-driven robot hand" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Humanoid_photo5.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/Humanoid_photo5.jpg" alt="Bluetooth voice-control box" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                        </div>
+                                        <p class="proj-photos__cap" data-en="Camera head · robot hand · voice-control box." data-zh="摄像头头部 · 机械手 · 语音控制盒。"></p>
+                                    </div>
+                                    <figure class="slide__fig">
+                                        <div class="slide__media">
+                                            <video src="assets/projects%20photos/Humanoid_video1_web.mp4#t=8" controls muted playsinline preload="metadata"></video>
+                                        </div>
+                                        <figcaption data-en="Demo with subtitles: the robot follows spoken commands."
+                                                    data-zh="演示视频(带字幕):机器人执行语音指令。"></figcaption>
+                                    </figure>
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Previous">‹</button>
+                        <button class="slider__arrow slider__arrow--next" type="button" aria-label="Next">›</button>
+                        <span class="slider__count" aria-live="polite"></span>
+                    </div>
                 </article>
 
                 <article class="entry">
@@ -968,6 +1054,6 @@
         <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
     </div>
 
-    <script src="script.js?v=22"></script>
+    <script src="script.js?v=23"></script>
 </body>
 </html>
