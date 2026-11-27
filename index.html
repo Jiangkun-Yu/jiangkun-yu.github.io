@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=19">
+    <link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
 
@@ -552,22 +552,28 @@
                                         </p>
                                     </div>
                                     <figure class="slide__fig">
-                                        <div class="slide__photos">
-                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo3_web.jpg" aria-label="Enlarge photo">
-                                                <img src="assets/projects%20photos/Hemoglobin_photo3_web.jpg" alt="Hemoglobin detection prototype with touch screen and finger sensor" loading="lazy">
+                                        <div class="photo-stack">
+                                            <button class="slide__media photo-stack__main" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo2.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/Hemoglobin_photo2.jpg" alt="Measuring hemoglobin at the fingertip with the prototype" loading="lazy">
                                                 <span class="slide__zoom">⤢</span>
                                             </button>
-                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo4_PCB_web.jpg" aria-label="Enlarge photo">
-                                                <img src="assets/projects%20photos/Hemoglobin_photo4_PCB_web.jpg" alt="Custom control PCB of the hemoglobin detector" loading="lazy">
-                                                <span class="slide__zoom">⤢</span>
-                                            </button>
+                                            <div class="photo-stack__row">
+                                                <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo3_web.jpg" aria-label="Enlarge photo">
+                                                    <img src="assets/projects%20photos/Hemoglobin_photo3_web.jpg" alt="Hemoglobin detection prototype with touch screen and finger sensor" loading="lazy">
+                                                    <span class="slide__zoom">⤢</span>
+                                                </button>
+                                                <button class="slide__media" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo4_PCB_web.jpg" aria-label="Enlarge photo">
+                                                    <img src="assets/projects%20photos/Hemoglobin_photo4_PCB_web.jpg" alt="Custom control PCB of the hemoglobin detector" loading="lazy">
+                                                    <span class="slide__zoom">⤢</span>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <figcaption data-en="The prototype with its touch screen and finger sensor, and the custom control PCB I designed."
-                                                    data-zh="带触摸屏与指夹传感器的样机,以及自主设计的控制电路板。"></figcaption>
+                                        <figcaption data-en="Measuring at the fingertip; the prototype with its touch screen; the custom control PCB I designed."
+                                                    data-zh="指尖测量;带触摸屏的样机;自主设计的控制电路板。"></figcaption>
                                     </figure>
                                 </section>
 
-                                <!-- 2. Demo video + measurement photo -->
+                                <!-- 2. Demo video -->
                                 <section class="slide slide--split slide--wide-media">
                                     <div class="slide__text">
                                         <h4 class="slide__title" data-en="Device in action" data-zh="样机演示"></h4>
@@ -583,14 +589,10 @@
                                                 <strong data-en="hospital blood test" data-zh="医院血常规检测"></strong><span data-en="." data-zh="进行对比。"></span>
                                             </li>
                                         </ul>
-                                        <button class="slide__media slide__media--small" type="button" data-zoom="assets/projects%20photos/Hemoglobin_photo2.jpg" aria-label="Enlarge photo">
-                                            <img src="assets/projects%20photos/Hemoglobin_photo2.jpg" alt="Measuring hemoglobin at the fingertip" loading="lazy">
-                                            <span class="slide__zoom">⤢</span>
-                                        </button>
                                     </div>
                                     <figure class="slide__fig">
                                         <div class="slide__media">
-                                            <video src="assets/projects%20photos/Hemoglobin_video1_web.mp4" controls muted playsinline preload="metadata"></video>
+                                            <video src="assets/projects%20photos/Hemoglobin_video1_web.mp4#t=2" controls muted playsinline preload="metadata"></video>
                                         </div>
                                         <figcaption data-en="Prototype demo with subtitles: a fingertip measurement, then a check against a blood test."
                                                     data-zh="样机演示(带字幕):指尖测量,并与血常规结果对比。"></figcaption>
@@ -966,6 +968,6 @@
         <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
     </div>
 
-    <script src="script.js?v=19"></script>
+    <script src="script.js?v=20"></script>
 </body>
 </html>

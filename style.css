@@ -863,6 +863,25 @@ body:not(.lang-zh) .zh-only {
     background: #fff;
 }
 
+/* one wide photo on top, two smaller photos in a row below */
+.photo-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photo-stack__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.photo-stack__row .slide__media img {
+    height: 150px;
+    max-height: none;
+    object-fit: cover;
+}
+
 /* small photo under the text column */
 .slide__media--small {
     margin-top: 14px;
