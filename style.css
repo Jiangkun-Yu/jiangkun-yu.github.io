@@ -345,7 +345,7 @@ body:not(.lang-zh) .zh-only {
 
 .hero__content {
     position: relative;
-    max-width: 700px;
+    max-width: 1040px;
 }
 
 .hero__eyebrow {
@@ -358,6 +358,7 @@ body:not(.lang-zh) .zh-only {
 }
 
 .hero__headline {
+    text-wrap: balance;
     font-size: clamp(32px, 4.4vw, 54px);
     font-weight: 700;
     line-height: 1.15;
@@ -394,7 +395,7 @@ body:not(.lang-zh) .zh-only {
     font-size: 18px;
     color: var(--ink-soft);
     line-height: 1.6;
-    max-width: 640px;
+    max-width: 980px;
     margin-bottom: 24px;
 }
 
