@@ -194,4 +194,54 @@
         go(0);
     });
 
+
+    /* ---------- Cropped video player (.vcrop): custom controls, because the
+       native control bar would be cut off by the crop ---------- */
+    document.querySelectorAll('.vcrop').forEach(box => {
+        const v      = box.querySelector('video');
+        const big    = box.querySelector('.vcrop__big');
+        const play   = box.querySelector('.vcrop__play');
+        const sound  = box.querySelector('.vcrop__sound');
+        const full   = box.querySelector('.vcrop__full');
+        const seek   = box.querySelector('.vcrop__seek');
+        const fill   = box.querySelector('.vcrop__fill');
+
+        const toggle = () => {
+            if (v.paused) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+            else v.pause();
+        };
+        const sync = () => {
+            const on = !v.paused;
+            box.classList.toggle('is-playing', on);
+            play.textContent = on ? '❚❚' : '▶';
+            sound.textContent = v.muted ? '🔇' : '🔊';
+        };
+
+        v.addEventListener('click', toggle);
+        big.addEventListener('click', toggle);
+        play.addEventListener('click', toggle);
+        sound.addEventListener('click', () => { v.muted = !v.muted; sync(); });
+        ['play', 'pause', 'volumechange'].forEach(ev => v.addEventListener(ev, sync));
+
+        v.addEventListener('timeupdate', () => {
+            if (v.duration) fill.style.width = (v.currentTime / v.duration * 100) + '%';
+        });
+        seek.addEventListener('click', e => {
+            const r = seek.getBoundingClientRect();
+            if (v.duration) v.currentTime = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * v.duration;
+        });
+
+        // full screen shows the whole, uncropped video with the browser's own controls
+        full.addEventListener('click', () => {
+            const req = v.requestFullscreen || v.webkitRequestFullscreen || v.webkitEnterFullscreen;
+            if (req) { v.controls = true; req.call(v); }
+        });
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) v.controls = false;
+        });
+        v.addEventListener('webkitendfullscreen', () => { v.controls = false; });
+
+        sync();
+    });
+
 })();

@@ -904,9 +904,105 @@ body:not(.lang-zh) .zh-only {
     background: #eceff3;
 }
 
-/* split slide with a narrow (portrait-style) video: give the text the larger column */
+/* split slide with a cropped, near-square video */
 .slide--split.slide--narrow-media:has(.slide__fig) {
-    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+}
+
+/* ---- Cropped video player (hides black side bars, keeps audio) ---- */
+.vcrop {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.slide__media.vcrop video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    transform: translateX(-50%);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.vcrop__big {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--accent-ink);
+    background: var(--accent);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.vcrop.is-playing .vcrop__big {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vcrop__bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 18px 10px 8px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+.vcrop.is-playing:not(:hover) .vcrop__bar {
+    opacity: 0;
+}
+
+.vcrop__btn {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    cursor: pointer;
+}
+
+.vcrop__btn:hover {
+    background: var(--accent);
+    color: var(--accent-ink);
+}
+
+.vcrop__seek {
+    position: relative;
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.vcrop__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-radius: 3px;
+    background: var(--accent);
 }
 
 /* row of three small photos */

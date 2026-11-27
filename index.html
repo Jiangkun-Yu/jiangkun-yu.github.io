@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=25">
+    <link rel="stylesheet" href="style.css?v=26">
 </head>
 <body>
 
@@ -692,8 +692,16 @@
                                         <p class="proj-photos__cap" data-en="Camera head · robot hand · voice-control box." data-zh="摄像头头部 · 机械手 · 语音控制盒。"></p>
                                     </div>
                                     <figure class="slide__fig">
-                                        <div class="slide__media">
-                                            <video src="assets/projects%20photos/Humanoid_video1.mp4" controls muted playsinline preload="metadata"></video>
+                                        <!-- cropped video: the black side bars of the original are hidden with CSS (audio kept) -->
+                                        <div class="slide__media vcrop" style="aspect-ratio: 1480 / 1220">
+                                            <video src="assets/projects%20photos/Humanoid_video1.mp4" muted playsinline preload="metadata"></video>
+                                            <button class="vcrop__big" type="button" aria-label="Play">▶</button>
+                                            <div class="vcrop__bar">
+                                                <button class="vcrop__btn vcrop__play" type="button" aria-label="Play / pause">▶</button>
+                                                <div class="vcrop__seek" role="slider" aria-label="Seek"><span class="vcrop__fill"></span></div>
+                                                <button class="vcrop__btn vcrop__sound" type="button" aria-label="Sound on / off">🔇</button>
+                                                <button class="vcrop__btn vcrop__full" type="button" aria-label="Full screen">⛶</button>
+                                            </div>
                                         </div>
                                         <figcaption data-en="Demo with subtitles: the robot follows spoken commands."
                                                     data-zh="演示视频(带字幕):机器人执行语音指令。"></figcaption>
@@ -1054,6 +1062,6 @@
         <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
     </div>
 
-    <script src="script.js?v=25"></script>
+    <script src="script.js?v=26"></script>
 </body>
 </html>
