@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=17">
+    <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
 
@@ -551,13 +551,89 @@
                         <h3 class="entry__title" data-en="RoboMaster National University Robot Competition" data-zh="全国大学生机器人大赛 RoboMaster 机甲大师赛"></h3>
                         <span class="entry__date" data-en="China University of Petroleum (East China), 2016 – 2017" data-zh="中国石油大学(华东),2016 – 2017"></span>
                     </div>
-                    <ul class="entry__list">
-                        <li>
-                            <span data-en="Core team member responsible for robotic motion control, precision targeting control, electronics and robot integration/debugging. Won the "
-                                  data-zh="作为团队前三骨干成员深度参与,完成机器人运动控制、武器系统精准打击控制、电子电路设计与机器人调试。获 "></span>
-                            <strong data-en="National First Prize (Top 8)" data-zh="全国一等奖(全国八强)"></strong><span data-en="." data-zh="。"></span>
-                        </li>
-                    </ul>
+                    <div class="slider" tabindex="0" aria-roledescription="carousel">
+                        <div class="slider__viewport">
+                            <div class="slider__track">
+
+                                <!-- 1. Overview + team photos -->
+                                <section class="slide slide--split">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="Team & robots" data-zh="团队与机器人"></h4>
+                                        <ul class="entry__list">
+                                            <li>
+                                                <strong class="hl" data-en="About" data-zh="赛事"></strong>
+                                                <span data-en=" · A national university robotics competition organized by DJI, where teams build robots for a " data-zh=" · 由大疆创新主办的全国大学生机器人赛事,各队自主研发机器人进行"></span>
+                                                <strong data-en="real-time shooting battle" data-zh="实时射击对抗"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Role" data-zh="角色"></strong>
+                                                <span data-en=" · Core team member responsible for robotic motion control, precision targeting control, electronics and robot integration/debugging."
+                                                      data-zh=" · 作为团队前三骨干成员深度参与,完成机器人运动控制、武器系统精准打击控制、电子电路设计与机器人调试。"></span>
+                                            </li>
+                                            <li>
+                                                <strong class="hl" data-en="Result" data-zh="成绩"></strong>
+                                                <span data-en=" · " data-zh=" · "></span>
+                                                <strong data-en="National First Prize (Top 8)" data-zh="全国一等奖(全国八强)"></strong><span data-en="." data-zh="。"></span>
+                                            </li>
+                                        </ul>
+                                        <p class="slide__hint">
+                                            <span data-en="Click → to see the competition videos" data-zh="点击 → 观看比赛视频">Click → to see the competition videos</span>
+                                        </p>
+                                    </div>
+                                    <figure class="slide__fig">
+                                        <div class="slide__photos">
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/RoboMaster2017_photo1.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/RoboMaster2017_photo1.jpg" alt="Our RoboMaster 2017 team with the robots" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                            <button class="slide__media" type="button" data-zoom="assets/projects%20photos/RoboMaster2017_photo2_web.jpg" aria-label="Enlarge photo">
+                                                <img src="assets/projects%20photos/RoboMaster2017_photo2_web.jpg" alt="Debugging our robot at the RoboMaster 2017 arena" loading="lazy">
+                                                <span class="slide__zoom">⤢</span>
+                                            </button>
+                                        </div>
+                                        <figcaption data-en="Our team with the robots, and debugging on site at RoboMaster 2017."
+                                                    data-zh="我们的团队与参赛机器人,以及 RoboMaster 2017 赛场调试。"></figcaption>
+                                    </figure>
+                                </section>
+
+                                <!-- 2. Official RoboMaster videos (credited; not our team's footage) -->
+                                <section class="slide slide--media">
+                                    <div class="slide__text">
+                                        <h4 class="slide__title" data-en="The competition" data-zh="赛事介绍"></h4>
+                                        <p class="slide__credit">
+                                            <span data-en="Videos: RoboMaster 2017 news footage © Xinhua News Agency (XinhuaVideo), shown for illustration only. The match is not my team's."
+                                                  data-zh="视频来源:新华社(新华视频)RoboMaster 2017 新闻报道,版权归原作者所有,仅作赛事介绍之用;比赛画面并非本队。"></span>
+                                        </p>
+                                    </div>
+                                    <div class="slide__videos">
+                                        <figure class="slide__fig">
+                                            <div class="slide__media">
+                                                <video src="assets/projects%20photos/RoboMaster2017_rules.mp4" controls muted playsinline preload="metadata"></video>
+                                            </div>
+                                            <figcaption>
+                                                <strong data-en="How it works" data-zh="比赛规则"></strong>
+                                                <span data-en=" · An introduction to the RoboMaster 2017 rules." data-zh=" · RoboMaster 2017 比赛规则介绍。"></span>
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="slide__fig">
+                                            <div class="slide__media">
+                                                <video src="assets/projects%20photos/RoboMaster2017_real%20games.mp4" controls muted playsinline preload="metadata"></video>
+                                            </div>
+                                            <figcaption>
+                                                <strong data-en="A real match" data-zh="真实比赛"></strong>
+                                                <span data-en=" · RoboMaster 2017 match footage (other teams)." data-zh=" · RoboMaster 2017 比赛画面(其他参赛队)。"></span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Previous">‹</button>
+                        <button class="slider__arrow slider__arrow--next" type="button" aria-label="Next">›</button>
+                        <span class="slider__count" aria-live="polite"></span>
+                    </div>
                 </article>
 
             </div>
@@ -811,6 +887,6 @@
         <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">›</button>
     </div>
 
-    <script src="script.js?v=17"></script>
+    <script src="script.js?v=18"></script>
 </body>
 </html>
